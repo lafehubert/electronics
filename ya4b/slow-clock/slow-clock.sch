@@ -22,8 +22,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 2850 3700 1900
 Wire Wire Line
-	3350 2850 3700 2850
-Wire Wire Line
 	3200 2450 3200 2700
 $Comp
 L Device:R_POT RV1
@@ -31,10 +29,10 @@ U 1 1 5DE7FA3D
 P 3200 2850
 F 0 "RV1" V 3085 2850 50  0000 C CNN
 F 1 "1 MΩ" V 2994 2850 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_148-149_Single_Vertical" H 3200 2850 50  0001 C CNN
+F 2 "Potentiometer_THT:GM_Small_Square_9mm_Pot" H 3200 2850 50  0001 C CNN
 F 3 "~" H 3200 2850 50  0001 C CNN
 	1    3200 2850
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 Connection ~ 2700 2100
 Wire Wire Line
@@ -44,7 +42,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 1150 2700 2100
 Wire Wire Line
-	2700 2100 2250 2100
+	2700 2100 2300 2100
 Wire Wire Line
 	1250 1150 2700 1150
 $Comp
@@ -53,7 +51,7 @@ U 1 1 5DE7D3B0
 P 3200 2300
 F 0 "R2" H 3270 2346 50  0000 L CNN
 F 1 "1 kΩ" H 3270 2255 50  0000 L CNN
-F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 3130 2300 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 2300 50  0001 C CNN
 F 3 "~" H 3200 2300 50  0001 C CNN
 	1    3200 2300
 	1    0    0    -1  
@@ -63,20 +61,13 @@ Wire Wire Line
 Connection ~ 2300 3650
 Wire Wire Line
 	2300 3300 2300 3650
-Wire Wire Line
-	2300 1900 3200 1900
-Connection ~ 2300 1900
-Wire Wire Line
-	2300 3000 2300 1900
-Wire Wire Line
-	2250 1900 2300 1900
 $Comp
 L Device:R R1
 U 1 1 5DE7A94A
 P 3200 1100
 F 0 "R1" H 3270 1146 50  0000 L CNN
 F 1 "1 kΩ" H 3270 1055 50  0000 L CNN
-F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 3130 1100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 1100 50  0001 C CNN
 F 3 "~" H 3200 1100 50  0001 C CNN
 	1    3200 1100
 	1    0    0    -1  
@@ -86,7 +77,7 @@ L Device:C C2
 U 1 1 5DE7A289
 P 2300 3150
 F 0 "C2" H 2415 3196 50  0000 L CNN
-F 1 "0.1 µF" H 2415 3105 50  0000 L CNN
+F 1 "1 µF" H 2415 3105 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 2338 3000 50  0001 C CNN
 F 3 "~" H 2300 3150 50  0001 C CNN
 	1    2300 3150
@@ -139,12 +130,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0101
 U 1 1 5DE75D24
-P 2650 3650
-F 0 "#PWR0101" H 2650 3400 50  0001 C CNN
-F 1 "GND" H 2655 3477 50  0000 C CNN
-F 2 "" H 2650 3650 50  0001 C CNN
-F 3 "" H 2650 3650 50  0001 C CNN
-	1    2650 3650
+P 2650 3850
+F 0 "#PWR0101" H 2650 3600 50  0001 C CNN
+F 1 "GND" H 2655 3677 50  0000 C CNN
+F 2 "" H 2650 3850 50  0001 C CNN
+F 3 "" H 2650 3850 50  0001 C CNN
+	1    2650 3850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -195,7 +186,7 @@ U 1 1 5DEA5B65
 P 1000 4950
 F 0 "R3" V 1207 4950 50  0000 C CNN
 F 1 "820 kΩ" V 1116 4950 50  0000 C CNN
-F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 930 4950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 930 4950 50  0001 C CNN
 F 3 "~" H 1000 4950 50  0001 C CNN
 	1    1000 4950
 	0    -1   -1   0   
@@ -268,7 +259,7 @@ U 1 1 5DEBB747
 P 850 5250
 F 0 "R4" V 643 5250 50  0000 C CNN
 F 1 "10 kΩ" V 734 5250 50  0000 C CNN
-F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 780 5250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 780 5250 50  0001 C CNN
 F 3 "~" H 850 5250 50  0001 C CNN
 	1    850  5250
 	0    1    1    0   
@@ -332,7 +323,7 @@ U 1 1 5DEDAF59
 P 4300 3600
 F 0 "SW2" H 4300 3885 50  0000 C CNN
 F 1 "SW_SPDT" H 4300 3794 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q" H 4300 3600 50  0001 C CNN
+F 2 "Button_Switch_THT:GM_SPDT_Slide_Switch" H 4300 3600 50  0001 C CNN
 F 3 "~" H 4300 3600 50  0001 C CNN
 	1    4300 3600
 	1    0    0    -1  
@@ -367,7 +358,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 5300 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 3350 4600 3350
+	5000 3350 4700 3350
 Wire Wire Line
 	4600 3350 4600 3500
 Wire Wire Line
@@ -376,8 +367,6 @@ Wire Wire Line
 	4500 3700 4600 3700
 Wire Wire Line
 	4600 3700 4600 3800
-Wire Wire Line
-	4600 3800 5000 3800
 Wire Wire Line
 	5600 3250 6050 3250
 Wire Wire Line
@@ -411,7 +400,7 @@ U 1 1 5DF1EC8A
 P 7950 3350
 F 0 "R5" V 8157 3350 50  0000 C CNN
 F 1 "330 Ω" V 8066 3350 50  0000 C CNN
-F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 7880 3350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7880 3350 50  0001 C CNN
 F 3 "~" H 7950 3350 50  0001 C CNN
 	1    7950 3350
 	0    -1   -1   0   
@@ -459,7 +448,6 @@ Wire Wire Line
 	2850 5000 2850 5350
 Wire Wire Line
 	6200 4900 6250 4900
-NoConn ~ 3050 2850
 NoConn ~ 10200 3450
 NoConn ~ 10200 3550
 NoConn ~ 10200 3750
@@ -1017,4 +1005,66 @@ NoConn ~ 8400 4500
 NoConn ~ 8400 4900
 NoConn ~ 7400 4600
 NoConn ~ 7400 4500
+Wire Wire Line
+	3700 2850 3350 2850
+NoConn ~ 3050 2850
+Wire Wire Line
+	2250 1900 3200 1900
+Wire Wire Line
+	2300 3000 2300 2100
+Connection ~ 2300 2100
+Wire Wire Line
+	2300 2100 2250 2100
+$Comp
+L Device:R R6
+U 1 1 5DFF992A
+P 4100 4250
+F 0 "R6" V 3893 4250 50  0000 C CNN
+F 1 "10 kΩ" V 3984 4250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4030 4250 50  0001 C CNN
+F 3 "~" H 4100 4250 50  0001 C CNN
+	1    4100 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5E01585D
+P 4400 2950
+F 0 "R7" V 4193 2950 50  0000 C CNN
+F 1 "10 kΩ" V 4284 2950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 2950 50  0001 C CNN
+F 3 "~" H 4400 2950 50  0001 C CNN
+	1    4400 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 2950 4700 2950
+Wire Wire Line
+	4700 2950 4700 3350
+Connection ~ 4700 3350
+Wire Wire Line
+	4700 3350 4600 3350
+Wire Wire Line
+	4250 2950 3550 2950
+Wire Wire Line
+	3550 2950 3550 3650
+Wire Wire Line
+	3550 3650 2650 3650
+Connection ~ 2650 3650
+Wire Wire Line
+	2650 3650 2650 3850
+Wire Wire Line
+	4700 3800 4700 4250
+Wire Wire Line
+	4700 4250 4250 4250
+Wire Wire Line
+	4600 3800 4700 3800
+Connection ~ 4700 3800
+Wire Wire Line
+	4700 3800 5000 3800
+Wire Wire Line
+	3950 4250 3550 4250
+Wire Wire Line
+	3550 4250 3550 3650
+Connection ~ 3550 3650
 $EndSCHEMATC
