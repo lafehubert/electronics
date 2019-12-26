@@ -1,0 +1,79 @@
+GAL16V8    ; RAM-select for YA4B RAM Board
+RamSelect  ;    
+
+
+CLK   A7    A6    A5    A4    J2    J1    J0    RD   GND
+NC    CS0   CS1   OE    W0    W1    NC    BS    WR   VCC
+
+/BS = A7 * J2 * A6 * J1 * A5 * J0 +
+     A7 * J2 * A6 * J1 * /A5 * /J0 +
+     A7 * J2 * /A6 * /J1 * A5 * J0 +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 +
+     /A7 * /J2 * A6 * J1 * A5 * J0 +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0
+
+/CS0 = A7 * J2 * A6 * J1 * A5 * J0 * /A4 +
+     A7 * J2 * A6 * J1 * /A5 * /J0 * /A4 +
+     A7 * J2 * /A6 * /J1 * A5 * J0 * /A4 +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 * /A4 +
+     /A7 * /J2 * A6 * J1 * A5 * J0 * /A4 +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 * /A4 +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 * /A4 +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0 * /A4
+
+/CS1 = A7 * J2 * A6 * J1 * A5 * J0 * A4 +
+     A7 * J2 * A6 * J1 * /A5 * /J0 * A4 +
+     A7 * J2 * /A6 * /J1 * A5 * J0 * A4 +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 * A4 +
+     /A7 * /J2 * A6 * J1 * A5 * J0 * A4 +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 * A4 +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 * A4 +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0 * A4
+
+/OE = A7 * J2 * A6 * J1 * A5 * J0 * /RD +
+     A7 * J2 * A6 * J1 * /A5 * /J0 * /RD +
+     A7 * J2 * /A6 * /J1 * A5 * J0 * /RD +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 * /RD +
+     /A7 * /J2 * A6 * J1 * A5 * J0 * /RD +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 * /RD +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 * /RD +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0 * /RD
+
+/W0 = A7 * J2 * A6 * J1 * A5 * J0 * /A4 * /WR * CLK +
+     A7 * J2 * A6 * J1 * /A5 * /J0 * /A4 * /WR * CLK +
+     A7 * J2 * /A6 * /J1 * A5 * J0 * /A4 * /WR * CLK +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 * /A4 * /WR * CLK +
+     /A7 * /J2 * A6 * J1 * A5 * J0 * /A4 * /WR * CLK +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 * /A4 * /WR * CLK +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 * /A4 * /WR * CLK +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0 * /A4 * /WR * CLK
+
+/W1 = A7 * J2 * A6 * J1 * A5 * J0 * A4 * /WR * CLK +
+     A7 * J2 * A6 * J1 * /A5 * /J0 * A4 * /WR * CLK +
+     A7 * J2 * /A6 * /J1 * A5 * J0 * A4 * /WR * CLK +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 * A4 * /WR * CLK +
+     /A7 * /J2 * A6 * J1 * A5 * J0 * A4 * /WR * CLK +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 * A4 * /WR * CLK +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 * A4 * /WR * CLK +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0 * A4 * /WR * CLK
+
+DESCRIPTION
+
+
+This replaces a bunch of combinatorial logic
+used for selecting one of two RAM chips based
+on the A4 line, and routes the proper RD and WR
+signals to the chips, and also controls a bus 
+transciever's output enable.
+
+BoardSelect is
+     A7 * J2 * A6 * J1 * A5 * J0 +
+     A7 * J2 * A6 * J1 * /A5 * /J0 +
+     A7 * J2 * /A6 * /J1 * A5 * J0 +
+     A7 * J2 * /A6 * /J1 * /A5 * /J0 +
+     /A7 * /J2 * A6 * J1 * A5 * J0 +
+     /A7 * /J2 * A6 * J1 * /A5 * /J0 +
+     /A7 * /J2 * /A6 * /J1 * A5 * J0 +
+     /A7 * /J2 * /A6 * /J1 * /A5 * /J0
