@@ -85,11 +85,10 @@ void setAddressOutput() {
 }
 
 void runTests() {
-  
   testLoadDataHigh();
   testLoadDataLow();
   testLoadAddress();
-  
+  testOutputEnable();
 }
 
 void foo() {
@@ -122,6 +121,54 @@ void testLoadDataLow() {
   }
 }
 
+void testLoadAddress() {
+  Serial.println("Starting load from address test.");
+  int address = 1;
+  while (address <= 0x80) {
+    loadAddress(address);
+    delayMicroseconds(1);
+    verifyAddress(address);
+    address = address << 1;
+  }
+}
+
+void testOutputEnable() {
+  Serial.println("Starting output enable test.");
+  int address = random(0, 256);
+  while (address != 255) {
+    address = random(0, 256);
+  }
+  loadAddress(address);
+  delayMicroseconds(1);
+  int data_low = address & 0xf;
+  int data_high = (address & 0xf0) >> 4;
+  verifyAddress(address);
+  verifyData(CTRL_OE_TL, data_low);
+  verifyData(CTRL_OE_TH, data_high);
+
+  digitalWrite(CTRL_OE_T, HIGH);
+  digitalWrite(CTRL_OE_TL, HIGH);
+  digitalWrite(CTRL_OE_TH, HIGH);
+
+  int data = readData();
+  if (data != 0xf) {
+    char buf[80];
+    sprintf(buf, "[FAIL] Expected 0xf, received %x", data);
+    Serial.println(buf);
+  } else {
+    Serial.println("[PASS] All data lines are high.");
+  }
+
+  address = readData();
+  if (address != 0xf) {
+    char buf[80];
+    sprintf(buf, "[FAIL] Expected 0xff, received %x", address);
+    Serial.println(buf);
+  } else {
+    Serial.println("[PASS] All address lines are high.");
+  }
+}
+
 void loadData(int loadPin, int data) {
   setDataOutput();
   setData(data);
@@ -142,17 +189,6 @@ void verifyData(int outputEnablePin, int expected) {
     Serial.println(buf);
   } else {
     Serial.println("[PASS] Load data passed.");
-  }
-}
-
-void testLoadAddress() {
-  Serial.println("Starting load from address test.");
-  int address = 1;
-  while (address <= 0x80) {
-    loadAddress(address);
-    delayMicroseconds(1);
-    verifyAddress(address);
-    address = address << 1;
   }
 }
 
