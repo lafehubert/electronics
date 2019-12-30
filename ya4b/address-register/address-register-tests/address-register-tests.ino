@@ -13,11 +13,13 @@
 #define ADDR_7 36
 
 // Control Signals
-#define CTRL_LOAD 40
-#define CTRL_INC  42
-#define CTRL_DEC 44
-#define CTRL_OE  46
-#define CTRL_CLK 48
+#define CTRL_RST  40
+#define CTRL_OE   42
+#define CTRL_DEC  44
+#define CTRL_INC  46
+#define CTRL_LOAD 48
+#define CTRL_CS   50 
+#define CTRL_CLK  52
 
 #define STR_HIGH "high"
 #define STR_LOW  "low"
@@ -35,16 +37,23 @@ void setup() {
 }
 
 void setupPins() {
-  for (int i = CTRL_LOAD; i <= CTRL_CLK; i+=2) {
+  resetControlPins();
+  for (int i = CTRL_RST; i <= CTRL_CLK; i+=2) {
+    pinMode(i, OUTPUT);
+  }
+  setAddressInput();
+}
+
+void resetControlPins() {
+  for (int i = CTRL_RST; i <= CTRL_CLK; i+=2) {
     if (i != CTRL_CLK) {
       digitalWrite(i, HIGH);
     } else {
       digitalWrite(i, LOW);
     }
-    pinMode(i, OUTPUT);
   }
-  setAddressInput();
 }
+
 void setAddressInput() {
   for (int i = ADDR_0; i <= ADDR_7; i+=2) {
     pinMode(i, INPUT_PULLUP);
@@ -58,20 +67,22 @@ void setAddressOutput() {
 }
 
 void runTests() {
-  testLoad();
+  //testLoad();
   testIncrement();
-  testDecrement();
-  testOutputEnable();
+  //testDecrement();
+  //testOutputEnable();
+  //testReset();
 }
 
 void testLoad() {
   Serial.println("Begin load address register tests...");
+  resetControlPins();
   boolean success = true;
   int address = 1;
   while (address <= 0x80) {
     loadAddress(address);
     delayMicroseconds(1);
-    success = success && verifyAddress(address);
+    success = verifyAddress(address) && success;
     address = address << 1;
   }
   if (success) {
@@ -83,11 +94,13 @@ void testLoad() {
 
 void testIncrement() {
   Serial.println("Begin increment address register tests...");
+  resetControlPins();
   boolean success = true;
   int address = 0;
   loadAddress(address);
   while (address < 256) {
-    success = success && verifyAddress(address);
+    Serial.println("bong");
+    success = verifyAddress(address) && success;
     incrementAddress();
     address++;
   }
@@ -100,11 +113,12 @@ void testIncrement() {
 
 void testDecrement() {
   Serial.println("Begin decrement address register tests...");
+  resetControlPins();
   boolean success = true;
   int address = 0xFF;
   loadAddress(address);
   while (address >= 0) {
-    success = success && verifyAddress(address);
+    success = verifyAddress(address) && success;
     decrementAddress();
     address--;
   }
@@ -117,6 +131,7 @@ void testDecrement() {
 
 void testOutputEnable() {
   Serial.println("Begin address register output enable tests.");
+  resetControlPins();
   boolean success = true;
   for (int address = 0; address < 255; address++) {
     loadAddress(address);
@@ -138,37 +153,57 @@ void testOutputEnable() {
   }
 }
 
+void testReset() {
+  
+}
+
 void loadAddress(int data) {
   setAddressOutput();
   setAddress(data);
+  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_LOAD, LOW);
   pulseClock();
   digitalWrite(CTRL_LOAD, HIGH);
+  digitalWrite(CTRL_CS, HIGH);
 }
 
 void incrementAddress() {
+  digitalWrite(CTRL_CLK, HIGH);
+  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_INC, LOW);
-  pulseClock();
-  digitalWrite(CTRL_INC, HIGH);
+  digitalWrite(CTRL_CLK, LOW);
+  delayMicroseconds(1);
+  //digitalWrite(CTRL_CLK, HIGH);
+  //pulseClock();
+  //digitalWrite(CTRL_INC, HIGH);
+  //digitalWrite(CTRL_CS, HIGH);
 }
 
 void decrementAddress() {
+  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_DEC, LOW);
   pulseClock();
   digitalWrite(CTRL_DEC, HIGH);
+  digitalWrite(CTRL_CS, HIGH);
 }
 
 boolean verifyAddress(int expected) {
   boolean success = true;
   setAddressInput();
+  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_OE, LOW);
   int address = readAddress();
   digitalWrite(CTRL_OE, HIGH);
+  digitalWrite(CTRL_CS, HIGH);
   if (address != expected) {
     char buf[80];
     sprintf(buf, "    [FAIL] Expected %0x, received %0x", expected, address);
     Serial.println(buf);
     success = false;
+  } else {
+    char buf[80];
+    sprintf(buf, "    [PASS] Expected %0x, received %0x", expected, address);
+    Serial.println(buf);
   }
   return success;
 }

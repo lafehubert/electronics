@@ -1,0 +1,22 @@
+GAL16V8    ; Address register control for YA4B
+ARCTRL  ;    
+
+
+CLK   CS    LD    INC   DEC   AO    R     NC    NC   GND
+NC    NC    NC    RST   OE    DN    UP    LOAD  NC   VCC
+
+
+/LOAD = /CS * /LD * CLK
+
+UP = /CS * /INC * CLK
+
+DN = /CS * /DEC * CLK
+
+/OE = /CS * /AO
+
+RST = /R
+
+DESCRIPTION
+
+Replaces 3 chips of combinatorial logic for a single
+address register
