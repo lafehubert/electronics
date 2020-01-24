@@ -13,13 +13,11 @@
 #define ADDR_7 36
 
 // Control Signals
-#define CTRL_RST  40
-#define CTRL_OE   42
-#define CTRL_DEC  44
-#define CTRL_INC  46
-#define CTRL_LOAD 48
-#define CTRL_CS   50 
-#define CTRL_CLK  52
+#define CTRL_UD   40
+#define CTRL_LOAD 42
+#define CTRL_CE   44
+#define CTRL_CLK  46
+#define CTRL_OE   48
 
 #define STR_HIGH "high"
 #define STR_LOW  "low"
@@ -38,14 +36,14 @@ void setup() {
 
 void setupPins() {
   resetControlPins();
-  for (int i = CTRL_RST; i <= CTRL_CLK; i+=2) {
+  for (int i = CTRL_UD; i <= CTRL_OE; i+=2) {
     pinMode(i, OUTPUT);
   }
   setAddressInput();
 }
 
 void resetControlPins() {
-  for (int i = CTRL_RST; i <= CTRL_CLK; i+=2) {
+  for (int i = CTRL_UD; i <= CTRL_OE; i+=2) {
     if (i != CTRL_CLK) {
       digitalWrite(i, HIGH);
     } else {
@@ -67,11 +65,17 @@ void setAddressOutput() {
 }
 
 void runTests() {
-  //testLoad();
+  //test();
+  testLoad();
   testIncrement();
-  //testDecrement();
-  //testOutputEnable();
-  //testReset();
+  testDecrement();
+  testOutputEnable();
+}
+
+void test() {
+  resetControlPins();
+  loadAddress(255);
+  digitalWrite(CTRL_OE, LOW);
 }
 
 void testLoad() {
@@ -81,7 +85,7 @@ void testLoad() {
   int address = 1;
   while (address <= 0x80) {
     loadAddress(address);
-    delayMicroseconds(1);
+    delay(1);
     success = verifyAddress(address) && success;
     address = address << 1;
   }
@@ -99,7 +103,6 @@ void testIncrement() {
   int address = 0;
   loadAddress(address);
   while (address < 256) {
-    Serial.println("bong");
     success = verifyAddress(address) && success;
     incrementAddress();
     address++;
@@ -153,48 +156,34 @@ void testOutputEnable() {
   }
 }
 
-void testReset() {
-  
-}
-
 void loadAddress(int data) {
   setAddressOutput();
   setAddress(data);
-  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_LOAD, LOW);
   pulseClock();
   digitalWrite(CTRL_LOAD, HIGH);
-  digitalWrite(CTRL_CS, HIGH);
 }
 
 void incrementAddress() {
-  digitalWrite(CTRL_CLK, HIGH);
-  digitalWrite(CTRL_CS, LOW);
-  digitalWrite(CTRL_INC, LOW);
-  digitalWrite(CTRL_CLK, LOW);
-  delayMicroseconds(1);
-  //digitalWrite(CTRL_CLK, HIGH);
-  //pulseClock();
-  //digitalWrite(CTRL_INC, HIGH);
-  //digitalWrite(CTRL_CS, HIGH);
+  digitalWrite(CTRL_UD, HIGH);
+  digitalWrite(CTRL_CE, LOW);
+  pulseClock();
+  digitalWrite(CTRL_CE, HIGH);
 }
 
 void decrementAddress() {
-  digitalWrite(CTRL_CS, LOW);
-  digitalWrite(CTRL_DEC, LOW);
+  digitalWrite(CTRL_UD, LOW);
+  digitalWrite(CTRL_CE, LOW);
   pulseClock();
-  digitalWrite(CTRL_DEC, HIGH);
-  digitalWrite(CTRL_CS, HIGH);
+  digitalWrite(CTRL_CE, HIGH);
 }
 
 boolean verifyAddress(int expected) {
   boolean success = true;
   setAddressInput();
-  digitalWrite(CTRL_CS, LOW);
   digitalWrite(CTRL_OE, LOW);
   int address = readAddress();
   digitalWrite(CTRL_OE, HIGH);
-  digitalWrite(CTRL_CS, HIGH);
   if (address != expected) {
     char buf[80];
     sprintf(buf, "    [FAIL] Expected %0x, received %0x", expected, address);
