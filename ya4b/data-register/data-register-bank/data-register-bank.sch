@@ -1871,7 +1871,6 @@ Wire Wire Line
 	6150 8250 6150 8450
 Wire Wire Line
 	6250 8250 6250 8450
-NoConn ~ 6750 8450
 NoConn ~ 6850 8450
 NoConn ~ 6950 8450
 NoConn ~ 7050 8450
@@ -1904,28 +1903,28 @@ Entry Wire Line
 Wire Wire Line
 	3350 1850 3600 1850
 Entry Wire Line
+	6750 8000 6850 7900
+Entry Wire Line
 	6650 8000 6750 7900
 Entry Wire Line
 	6550 8000 6650 7900
 Entry Wire Line
 	6450 8000 6550 7900
-Entry Wire Line
-	6350 8000 6450 7900
-Wire Wire Line
-	6350 8000 6350 8450
 Wire Wire Line
 	6450 8000 6450 8450
 Wire Wire Line
 	6550 8000 6550 8450
 Wire Wire Line
 	6650 8000 6650 8450
-Text Label 6350 8300 3    39   ~ 0
-Data0
+Wire Wire Line
+	6750 8000 6750 8450
 Text Label 6450 8300 3    39   ~ 0
-Data1
+Data0
 Text Label 6550 8300 3    39   ~ 0
-Data2
+Data1
 Text Label 6650 8300 3    39   ~ 0
+Data2
+Text Label 6750 8300 3    39   ~ 0
 Data3
 Wire Bus Line
 	8800 7900 8800 5600
@@ -2100,8 +2099,13 @@ Wire Wire Line
 	5150 7600 5150 7650
 Wire Wire Line
 	5150 7650 4700 7650
+Connection ~ 4700 7650
+Connection ~ 8800 7900
 Wire Bus Line
-	6450 7900 8800 7900
+	8800 7900 8900 7900
+NoConn ~ 6350 8450
+Wire Bus Line
+	6550 7900 8800 7900
 Wire Bus Line
 	3250 1550 3250 5600
 Wire Bus Line
@@ -2110,5 +2114,4 @@ Wire Bus Line
 	6950 1500 6950 5600
 Wire Bus Line
 	5100 1550 5100 5600
-Connection ~ 4700 7650
 $EndSCHEMATC

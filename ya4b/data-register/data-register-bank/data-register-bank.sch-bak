@@ -2080,6 +2080,26 @@ F 3 "" H 14950 3650 50  0001 C CNN
 	1    14950 3650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C10
+U 1 1 60FD0575
+P 5150 7450
+F 0 "C10" H 5265 7496 50  0000 L CNN
+F 1 "0.1µF" H 5265 7405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 5188 7300 50  0001 C CNN
+F 3 "~" H 5150 7450 50  0001 C CNN
+	1    5150 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 7250 5150 7250
+Wire Wire Line
+	5150 7250 5150 7300
+Connection ~ 4700 7250
+Wire Wire Line
+	5150 7600 5150 7650
+Wire Wire Line
+	5150 7650 4700 7650
 Wire Bus Line
 	6450 7900 8800 7900
 Wire Bus Line
@@ -2090,4 +2110,5 @@ Wire Bus Line
 	6950 1500 6950 5600
 Wire Bus Line
 	5100 1550 5100 5600
+Connection ~ 4700 7650
 $EndSCHEMATC
