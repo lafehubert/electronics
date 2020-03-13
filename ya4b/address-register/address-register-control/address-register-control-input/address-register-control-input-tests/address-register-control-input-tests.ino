@@ -8,44 +8,26 @@
  */
 
 
-// Jumpers
+#define CTRL_RST 23
+#define CTRL_LD  25
+#define CTRL_CE  27
+#define CTRL_B0  29
+#define CTRL_B1  31
+#define CTRL_J2  33
+#define CTRL_B2  35
+#define CTRL_J3  37
+#define CTRL_B3  39
 
-#define CTRL_J3 33
-#define CTRL_J2 31
 
-// Output Section
-
-#define CTRL_OE 35
-#define CTRL_A3 29
-#define CTRL_A2 27
-#define CTRL_A1 25
-#define CTRL_A0 23
-
-#define CO_ABS  30
-#define CO_OE3  28
-#define CO_OE2  26
-#define CO_OE1  24
-#define CO_OE0  22
-
-// Input Section
-
-#define CTRL_CE  51
-#define CTRL_LD  49
-#define CTRL_RST 47
-#define CTRL_B3  45
-#define CTRL_B2  43
-#define CTRL_B1  41
-#define CTRL_B0  39
-
-#define CI_BBS 52
-#define CI_LD3 50
-#define CI_LD2 48
-#define CI_LD1 46
-#define CI_LD0 44
-#define CI_CE3 42
-#define CI_CE2 40
-#define CI_CE1 38
-#define CI_CE0 36
+#define CI_BBS 22
+#define CI_CE0 24
+#define CI_CE1 26
+#define CI_CE2 28
+#define CI_CE3 30
+#define CI_LD0 32
+#define CI_LD1 34
+#define CI_LD2 36
+#define CI_LD3 38
 
 
 #define STR_HIGH "high"
@@ -53,22 +35,13 @@
 
 int jumper_pins[2]     = { CTRL_J2, CTRL_J3 };
 
-int a_input_pins[5]    = { CO_OE0, CO_OE1, CO_OE2, CO_OE3, CO_ABS };
-int a_output_pins[5]   = { CTRL_A0, CTRL_A1, CTRL_A2, CTRL_A3, CTRL_OE };
-int a_address_pins[4]  = { CTRL_A0, CTRL_A1, CTRL_A2, CTRL_A3 };
+int input_pins[9]    = { CI_LD0, CI_LD1, CI_LD2, CI_LD3, CI_CE0, CI_CE1, CI_CE2, CI_CE3, CI_BBS }; 
+int output_pins[7]   = { CTRL_B0, CTRL_B1, CTRL_B2, CTRL_B3, CTRL_RST, CTRL_LD, CTRL_CE };
+int address_pins[4]  = { CTRL_B0, CTRL_B1, CTRL_B2, CTRL_B3 };
 
-int b_input_pins[9]    = { CI_LD0, CI_LD1, CI_LD2, CI_LD3, CI_CE0, CI_CE1, CI_CE2, CI_CE3, CI_BBS }; 
-int b_output_pins[7]   = { CTRL_B0, CTRL_B1, CTRL_B2, CTRL_B3, CTRL_RST, CTRL_LD, CTRL_CE };
-int b_address_pins[4]  = { CTRL_B0, CTRL_B1, CTRL_B2, CTRL_B3 };
+//const char* states[2] = { STR_LOW, STR_HIGH };
 
-const char* states[2] = { STR_LOW, STR_HIGH };
-
-struct output_states {
-  boolean a_bs;
-  boolean oe_0;
-  boolean oe_1;
-  boolean oe_2;
-  boolean oe_3;
+struct states {
   boolean b_bs;
   boolean ce_0;
   boolean ce_1;
@@ -90,8 +63,8 @@ void setup() {
 
 void setupPins() {
   setupJumperPins();
-  setupOutputSectionPins();
-  setupInputSectionPins();
+  setupInputPins();
+  setupOutputPins();
 }
 
 void setupJumperPins() {
@@ -99,28 +72,23 @@ void setupJumperPins() {
   pinMode(CTRL_J2, OUTPUT);
 }
 
-void setupOutputSectionPins() {
-  for (int i = 0; i < 5; i++) {
-    pinMode(a_input_pins[i], INPUT);
-  }
-  for (int i = 0; i < 5; i++) {
-    pinMode(a_output_pins[i], OUTPUT);
+void setupInputPins() {
+  for (int i = 0; i < 9; i++) {
+    pinMode(input_pins[i], INPUT);
   }
 }
 
-void setupInputSectionPins() {
-  for (int i = 0; i < 9; i++) {
-    pinMode(b_input_pins[i], INPUT_PULLUP);
-  }
+void setupOutputPins() {
   for (int i = 0; i < 7; i++) {
-    pinMode(b_output_pins[i], OUTPUT);
+    pinMode(output_pins[i], OUTPUT);
   }
 }
 
 void resetControlLines() {
   resetJumpers();
-  resetOutputSectionControlLines();
-  resetInputSectionControlLines();
+  for (int i = 0; i < 7; i++) {
+    digitalWrite(output_pins[i], HIGH);
+  }
 }
 
 void resetJumpers() {
@@ -128,27 +96,7 @@ void resetJumpers() {
   digitalWrite(CTRL_J2, 0);
 }
 
-void resetOutputSectionControlLines() {
-  for (int i = 0; i < 5; i++) {
-    digitalWrite(a_output_pins[i], HIGH);
-  }
-}
-
-void resetInputSectionControlLines() {
-  for (int i = 0; i < 7; i++) {
-    digitalWrite(b_output_pins[i], HIGH);
-  }
-}
-
-void setOutputRegisterAddress(int address) {
-  setRegisterAddress(a_address_pins, address);
-}
-
-void setInputRegisterAddress(int address) {
-  setRegisterAddress(b_address_pins, address);
-}
-
-void setRegisterAddress(int *address_pins, int address) {
+void setRegisterAddress(int address) {
   for (int i = 0; i < 4; i++) {
     digitalWrite(address_pins[i], (address >> i) & 1);
   }
@@ -160,59 +108,10 @@ void setJumpers(int jumpers) {
 }
 
 void runTest() {
-  testOutputBoardSelect();
-  testOutputEnable();
   testInputBoardSelect();
   testInputLoad();
   testInputCountEnable();
   testInputReset();
-}
-
-void testOutputBoardSelect() {
-  const char *testName = "output board select";
-  printBegin(testName);
-  boolean passed = true;
-  resetControlLines();
-  digitalWrite(CTRL_OE, HIGH);
-  for (int jumpers = 0; jumpers < 4; jumpers++) {
-    setJumpers(jumpers);
-    for (int address = 0; address < 16; address++) {
-      setOutputRegisterAddress(address);
-      output_states states;
-      readOutputStates(states);
-      passed = validateOutputBoardSelect(address, states, getExpectedBoardSelectState(jumpers, address)) && passed;
-    }
-  }
-  printResult(passed, testName);
-}
-
-void testOutputEnable() {
-  const char *testName = "output enable";
-  printBegin(testName);
-  boolean passed = true;
-  resetControlLines();
-  for (int jumpers = 0; jumpers < 4; jumpers++) {
-    for (int address = 0; address < 16; address++) {
-      passed = testOutputState(jumpers, address) && passed;
-    }
-  }
-  printResult(passed, testName);
-}
-
-boolean testOutputState(int jumpers, int address) {
-  output_states states;
-  
-  digitalWrite(CTRL_OE, LOW);
-  setJumpers(jumpers);
-  setOutputRegisterAddress(address);
-  
-  readOutputStates(states);
-  return validateOutputSectionStates(states, 
-          getExpectedBoardSelectState(jumpers, address), 
-          getExpectedRegisterSelect(0, jumpers, address), 
-          getExpectedRegisterSelect(1, jumpers, address), 
-          getExpectedRegisterSelect(2, jumpers, address), 
-          getExpectedRegisterSelect(3, jumpers, address));
 }
 
 void testInputBoardSelect() {
@@ -223,10 +122,10 @@ void testInputBoardSelect() {
   for (int jumpers = 0; jumpers < 4; jumpers++) {
     setJumpers(jumpers);
     for (int address = 0; address < 16; address++) {
-      setInputRegisterAddress(address);
-      output_states states;
-      readOutputStates(states);
-      passed = validateInputBoardSelect(address, states, getExpectedBoardSelectState(jumpers, address)) && passed;
+      setRegisterAddress(address);
+      states states;
+      readStates(states);
+      passed = validateBoardSelect(address, states, getExpectedBoardSelectState(jumpers, address)) && passed;
     }
   }
   printResult(passed, testName);
@@ -239,7 +138,7 @@ void testInputLoad() {
   resetControlLines();
   for (int jumpers = 0; jumpers < 4; jumpers++) {
     for (int address = 0; address < 16; address++) {
-      passed = testInputLoadState(jumpers, address) && passed;
+      passed = testLoadState(jumpers, address) && passed;
     }
   }
   printResult(passed, testName);
@@ -252,7 +151,7 @@ void testInputCountEnable() {
   resetControlLines();
   for (int jumpers = 0; jumpers < 4; jumpers++) {
     for (int address = 0; address < 16; address++) {
-      passed = testInputCountEnableState(jumpers, address) && passed;
+      passed = testCountEnableState(jumpers, address) && passed;
     }
   }
   printResult(passed, testName);
@@ -265,21 +164,21 @@ void testInputReset() {
   resetControlLines();
   for (int jumpers = 0; jumpers < 4; jumpers++) {
     for (int address = 0; address < 16; address++) {
-      passed = testInputResetState(jumpers, address) && passed;
+      passed = testResetState(jumpers, address) && passed;
     }
   }
   printResult(passed, testName);
 }
 
-boolean testInputLoadState(int jumpers, int address) {
-  output_states states;
+boolean testLoadState(int jumpers, int address) {
+  states states;
   
   digitalWrite(CTRL_LD, LOW);
   setJumpers(jumpers);
-  setInputRegisterAddress(address);
+  setRegisterAddress(address);
   
-  readOutputStates(states);
-  return validateInputSectionStates(states, 
+  readStates(states);
+  return validateStates(states, 
           getExpectedBoardSelectState(jumpers, address), 
           getExpectedRegisterSelect(0, jumpers, address), 
           getExpectedRegisterSelect(1, jumpers, address), 
@@ -291,15 +190,15 @@ boolean testInputLoadState(int jumpers, int address) {
           HIGH);
 }
 
-boolean testInputCountEnableState(int jumpers, int address) {
-  output_states states;
+boolean testCountEnableState(int jumpers, int address) {
+  states states;
   
   digitalWrite(CTRL_CE, LOW);
   setJumpers(jumpers);
-  setInputRegisterAddress(address);
+  setRegisterAddress(address);
   
-  readOutputStates(states);
-  return validateInputSectionStates(states, 
+  readStates(states);
+  return validateStates(states, 
           getExpectedBoardSelectState(jumpers, address),
           HIGH,
           HIGH,
@@ -311,15 +210,15 @@ boolean testInputCountEnableState(int jumpers, int address) {
           getExpectedRegisterSelect(3, jumpers, address));
 }
 
-boolean testInputResetState(int jumpers, int address) {
-  output_states states;
+boolean testResetState(int jumpers, int address) {
+  states states;
   
   digitalWrite(CTRL_RST, LOW);
   setJumpers(jumpers);
-  setInputRegisterAddress(address);
+  setRegisterAddress(address);
   
-  readOutputStates(states);
-  return validateInputSectionStates(states, 
+  readStates(states);
+  return validateStates(states, 
           getExpectedBoardSelectState(jumpers, address),
           LOW,
           LOW,
@@ -357,25 +256,7 @@ boolean getExpectedRegisterSelect(int regno, int jumpers, int address) {
   return HIGH;
 }
 
-
-
-boolean validateOutputSectionStates(output_states &states, boolean a_bs, boolean oe_0, boolean oe_1, boolean oe_2, boolean oe_3) {
-  if ((states.a_bs != a_bs) ||
-       (states.oe_0 != oe_0) ||
-       (states.oe_1 != oe_1) ||
-       (states.oe_2 != oe_2) ||
-       (states.oe_3 != oe_3)) {
-    char buf[80];
-    sprintf(buf, "    [FAIL] Expected a_bs(%1d), oe_0(%1d), oe_1(%1d), oe_2(%1d), oe_3(%1d)", a_bs, oe_0, oe_1, oe_2, oe_3);
-    Serial.println(buf);
-    sprintf(buf, "           Received a_bs(%1d), oe_0(%1d), oe_1(%1d), oe_2(%1d), oe_3(%1d)", states.a_bs, states.oe_0, states.oe_1, states.oe_2, states.oe_3);
-    Serial.println(buf);
-    return false;    
-  }
-  return true;
-}
-
-boolean validateInputSectionStates(output_states &states, boolean b_bs, boolean ld_0, boolean ld_1, boolean ld_2, boolean ld_3, boolean ce_0, boolean ce_1, boolean ce_2, boolean ce_3) {
+boolean validateStates(states &states, boolean b_bs, boolean ld_0, boolean ld_1, boolean ld_2, boolean ld_3, boolean ce_0, boolean ce_1, boolean ce_2, boolean ce_3) {
   if ((states.b_bs != b_bs) ||
        (states.ld_0 != ld_0) ||
        (states.ld_1 != ld_1) ||
@@ -395,19 +276,7 @@ boolean validateInputSectionStates(output_states &states, boolean b_bs, boolean 
   return true;
 }
 
-boolean validateOutputBoardSelect(int address, output_states &states, boolean a_bs) {
-  if (states.a_bs != a_bs) {
-    char buf[80];
-    sprintf(buf, "    [FAIL] Address %0x, expected a_bs(%1d)", address, a_bs);
-    Serial.println(buf);
-    sprintf(buf, "           Received a_bs(%1d)", states.a_bs);
-    Serial.println(buf);
-    return false;
-  }
-  return true;
-}
-
-boolean validateInputBoardSelect(int address, output_states &states, boolean b_bs) {
+boolean validateBoardSelect(int address, states &states, boolean b_bs) {
   if (states.b_bs != b_bs) {
     char buf[80];
     sprintf(buf, "    [FAIL] Address %0x, expected b_bs(%1d)", address, b_bs);
@@ -419,29 +288,13 @@ boolean validateInputBoardSelect(int address, output_states &states, boolean b_b
   return true;
 }
 
-void printOutputStates(output_states &states) {
-  Serial.println("Output: {");
-  printValue("a_bs", states.a_bs);
-  printValue("oe_3", states.oe_3);
-  printValue("oe_2", states.oe_2);
-  printValue("oe_1", states.oe_1);
-  printValue("oe_0", states.oe_0);
-  Serial.println("}");
-}
-
 void printValue(const char* param, int value) {
   char buf[80];
   sprintf(buf, "    %s: %1d,", param, value);
   Serial.println(buf);
 }
 
-void readOutputStates(output_states &states) {
-  states.a_bs = digitalRead(CO_ABS);
-  states.oe_0 = digitalRead(CO_OE0);
-  states.oe_1 = digitalRead(CO_OE1);
-  states.oe_2 = digitalRead(CO_OE2);
-  states.oe_3 = digitalRead(CO_OE3);
-
+void readStates(states &states) {
   states.b_bs = digitalRead(CI_BBS);
   states.ce_0 = digitalRead(CI_CE0);
   states.ce_1 = digitalRead(CI_CE1);
