@@ -1,0 +1,1 @@
+The difference between the -patched and the normal one is that the 1.0.1 board had a small off-by-one error on the input pins for the GAL, so I fixed it in the GAL programming.  The real board (v1.0.2) is fixed and won't need the patched GAL.
