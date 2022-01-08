@@ -1,0 +1,25 @@
+Name     decoder2.dig ;
+PartNo   00 ;
+Date     01.07.2020 ;
+Revision 01 ;
+Designer gmartin ;
+Company  unknown ;
+Assembly None ;
+Location unknown ;
+Device   g16v8a ;
+
+/* inputs */
+PIN 2 = S0;
+PIN 3 = S1;
+PIN 4 = S2;
+PIN 5 = S3;
+
+/* outputs */
+PIN 15 = CE;
+PIN 16 = ADD;
+PIN 17 = SUB;
+
+/* combinatorial logic */
+ADD = S1 # S2 # S3;
+CE = !S0 # S2 # S3;
+SUB = (S0 & !S1) # (!S1 & !S2) # (S1 & S2) # S3;

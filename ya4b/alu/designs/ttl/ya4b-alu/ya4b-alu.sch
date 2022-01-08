@@ -1,0 +1,4783 @@
+EESchema Schematic File Version 4
+LIBS:ya4b-alu-cache
+EELAYER 30 0
+EELAYER END
+$Descr C 22000 17000
+encoding utf-8
+Sheet 1 1
+Title "Ya4b Arithmetic Logic Unit"
+Date "2020-06-11"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS154 U1
+U 1 1 5EE2D092
+P 1850 2250
+F 0 "U1" H 1850 3431 50  0000 C CNN
+F 1 "74LS154" H 1850 3340 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W15.24mm_Socket" H 1850 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS154" H 1850 2250 50  0001 C CNN
+	1    1850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS379 U2
+U 1 1 5EE2DF1B
+P 4450 1950
+F 0 "U2" H 4450 2831 50  0000 C CNN
+F 1 "74LS379" H 4450 2740 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4450 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS379" H 4450 1950 50  0001 C CNN
+	1    4450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS379 U3
+U 1 1 5EE2E0A2
+P 4450 4300
+F 0 "U3" H 4450 5181 50  0000 C CNN
+F 1 "74LS379" H 4450 5090 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4450 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS379" H 4450 4300 50  0001 C CNN
+	1    4450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS173 U4
+U 1 1 5EE2E87F
+P 16900 2500
+F 0 "U4" H 16900 3581 50  0000 C CNN
+F 1 "74LS173" H 16900 3490 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 16900 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS173" H 16900 2500 50  0001 C CNN
+	1    16900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS173 U5
+U 1 1 5EE2EE20
+P 19200 2450
+F 0 "U5" H 19200 3531 50  0000 C CNN
+F 1 "74LS173" H 19200 3440 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 19200 2450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS173" H 19200 2450 50  0001 C CNN
+	1    19200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U6
+U 1 1 5EE2F816
+P 7800 1850
+F 0 "U6" H 7800 2631 50  0000 C CNN
+F 1 "74LS243" H 7800 2540 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7800 1850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 7800 1850 50  0001 C CNN
+	1    7800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U7
+U 1 1 5EE2FD34
+P 13000 1950
+F 0 "U7" H 13000 2731 50  0000 C CNN
+F 1 "74LS243" H 13000 2640 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 13000 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 13000 1950 50  0001 C CNN
+	1    13000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U8
+U 1 1 5EE302DB
+P 12100 4650
+F 0 "U8" H 12100 5431 50  0000 C CNN
+F 1 "74LS243" H 12100 5340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 12100 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 12100 4650 50  0001 C CNN
+	1    12100 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U9
+U 1 1 5EE30637
+P 3550 8650
+F 0 "U9" H 3550 9431 50  0000 C CNN
+F 1 "74LS243" H 3550 9340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3550 8650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 3550 8650 50  0001 C CNN
+	1    3550 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U10
+U 1 1 5EE3086B
+P 7100 8650
+F 0 "U10" H 7100 9431 50  0000 C CNN
+F 1 "74LS243" H 7100 9340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7100 8650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 7100 8650 50  0001 C CNN
+	1    7100 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U11
+U 1 1 5EE30AE8
+P 10650 8650
+F 0 "U11" H 10650 9431 50  0000 C CNN
+F 1 "74LS243" H 10650 9340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10650 8650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 10650 8650 50  0001 C CNN
+	1    10650 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS243 U12
+U 1 1 5EE30DAE
+P 13100 8650
+F 0 "U12" H 13100 9431 50  0000 C CNN
+F 1 "74LS243" H 13100 9340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 13100 8650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS243" H 13100 8650 50  0001 C CNN
+	1    13100 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS157 U15
+U 1 1 5EE33A90
+P 7800 4850
+F 0 "U15" H 7800 5931 50  0000 C CNN
+F 1 "74LS157" H 7800 5840 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7800 4850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 7800 4850 50  0001 C CNN
+	1    7800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx_IEEE:74LS283 U14
+U 1 1 5EE340E0
+P 10150 4650
+F 0 "U14" H 10150 4052 50  0000 C CNN
+F 1 "74LS283" H 10150 3961 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 10150 4650 50  0001 C CNN
+F 3 "" H 10150 4650 50  0001 C CNN
+	1    10150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx_IEEE:74LS283 U13
+U 1 1 5EE34687
+P 11250 1950
+F 0 "U13" H 11250 1352 50  0000 C CNN
+F 1 "74LS283" H 11250 1261 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 11250 1950 50  0001 C CNN
+F 3 "" H 11250 1950 50  0001 C CNN
+	1    11250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS85 U16
+U 1 1 5EE34F82
+P 14650 7000
+F 0 "U16" H 14650 7881 50  0000 C CNN
+F 1 "74LS85" H 14650 7790 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 14650 7000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS85" H 14650 7000 50  0001 C CNN
+	1    14650 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1000 1550 0    50   Input ~ 0
+OP0
+Text GLabel 1000 1650 0    50   Input ~ 0
+OP1
+Text GLabel 1000 1750 0    50   Input ~ 0
+OP2
+Text GLabel 1000 1850 0    50   Input ~ 0
+OP3
+Text GLabel 1000 2050 0    50   Input ~ 0
+~ALUEN
+Wire Wire Line
+	1000 1550 1350 1550
+Wire Wire Line
+	1000 1650 1350 1650
+Wire Wire Line
+	1000 1750 1350 1750
+Wire Wire Line
+	1000 1850 1350 1850
+Wire Wire Line
+	1000 2050 1200 2050
+Wire Wire Line
+	1350 2150 1200 2150
+Wire Wire Line
+	1200 2150 1200 2050
+Connection ~ 1200 2050
+Wire Wire Line
+	1200 2050 1350 2050
+Text GLabel 3550 2150 0    50   Input ~ 0
+D3
+Text GLabel 3550 1950 0    50   Input ~ 0
+D2
+Text GLabel 3550 1750 0    50   Input ~ 0
+D1
+Text GLabel 3550 1550 0    50   Input ~ 0
+D0
+Text GLabel 3550 2350 0    50   Input ~ 0
+CLK
+Wire Wire Line
+	3550 1750 3800 1750
+Wire Wire Line
+	3550 1550 3850 1550
+Wire Wire Line
+	3550 1950 3750 1950
+Wire Wire Line
+	3550 2150 3700 2150
+Wire Wire Line
+	3850 1550 3850 3900
+Wire Wire Line
+	3850 3900 3950 3900
+Connection ~ 3850 1550
+Wire Wire Line
+	3850 1550 3950 1550
+Wire Wire Line
+	3800 1750 3800 4100
+Wire Wire Line
+	3800 4100 3950 4100
+Connection ~ 3800 1750
+Wire Wire Line
+	3800 1750 3950 1750
+Wire Wire Line
+	3750 1950 3750 4300
+Wire Wire Line
+	3750 4300 3950 4300
+Connection ~ 3750 1950
+Wire Wire Line
+	3750 1950 3950 1950
+Wire Wire Line
+	3700 2150 3700 4500
+Wire Wire Line
+	3700 4500 3950 4500
+Connection ~ 3700 2150
+Wire Wire Line
+	3700 2150 3950 2150
+Wire Wire Line
+	3550 2350 3650 2350
+Wire Wire Line
+	3650 2350 3650 4700
+Wire Wire Line
+	3650 4700 3950 4700
+Connection ~ 3650 2350
+Wire Wire Line
+	3650 2350 3950 2350
+Text GLabel 3550 2600 0    50   Input ~ 0
+~LDA
+Text GLabel 3550 4800 0    50   Input ~ 0
+~LDB
+Wire Wire Line
+	3950 2450 3950 2600
+Wire Wire Line
+	3950 2600 3550 2600
+Wire Wire Line
+	3950 4800 3550 4800
+Text GLabel 5200 1550 2    50   Output ~ 0
+A0
+Text GLabel 5200 1750 2    50   Output ~ 0
+A1
+Text GLabel 5200 1950 2    50   Output ~ 0
+A2
+Text GLabel 5200 2150 2    50   Output ~ 0
+A3
+Text GLabel 5400 1650 2    50   Output ~ 0
+~A0
+Text GLabel 5400 1850 2    50   Output ~ 0
+~A1
+Text GLabel 5400 2050 2    50   Output ~ 0
+~A2
+Text GLabel 5400 2250 2    50   Output ~ 0
+~A3
+Text GLabel 5200 3900 2    50   Output ~ 0
+B0
+Text GLabel 5200 4100 2    50   Output ~ 0
+B1
+Text GLabel 5200 4300 2    50   Output ~ 0
+B2
+Text GLabel 5200 4500 2    50   Output ~ 0
+B3
+Text GLabel 5400 4000 2    50   Output ~ 0
+~B0
+Text GLabel 5400 4200 2    50   Output ~ 0
+~B1
+Text GLabel 5400 4400 2    50   Output ~ 0
+~B2
+Text GLabel 5400 4600 2    50   Output ~ 0
+~B3
+Wire Wire Line
+	4950 1550 5200 1550
+Wire Wire Line
+	4950 1650 5400 1650
+Wire Wire Line
+	4950 1750 5200 1750
+Wire Wire Line
+	4950 1850 5400 1850
+Wire Wire Line
+	4950 1950 5200 1950
+Wire Wire Line
+	4950 2050 5400 2050
+Wire Wire Line
+	4950 2150 5200 2150
+Wire Wire Line
+	4950 2250 5400 2250
+Wire Wire Line
+	4950 3900 5200 3900
+Wire Wire Line
+	4950 4000 5400 4000
+Wire Wire Line
+	4950 4100 5200 4100
+Wire Wire Line
+	4950 4200 5400 4200
+Wire Wire Line
+	4950 4300 5200 4300
+Wire Wire Line
+	4950 4400 5400 4400
+Wire Wire Line
+	4950 4500 5200 4500
+Wire Wire Line
+	4950 4600 5400 4600
+Text GLabel 2650 1550 2    35   Output ~ 0
+~FADD
+Text GLabel 2650 1650 2    35   Output ~ 0
+~FADDC
+Text GLabel 2650 1750 2    35   Output ~ 0
+~FSUB
+Text GLabel 2650 1850 2    35   Output ~ 0
+~FSUBC
+Text GLabel 2650 1950 2    35   Output ~ 0
+~FNEGA
+Text GLabel 2650 2150 2    35   Output ~ 0
+~FOR
+Text GLabel 2650 2250 2    35   Output ~ 0
+~FAND
+Text GLabel 2650 2350 2    35   Output ~ 0
+~FXOR
+Text GLabel 2650 2450 2    35   Output ~ 0
+~FNOTA
+Text GLabel 2650 2750 2    35   Output ~ 0
+~FCMP
+Wire Wire Line
+	2350 1550 2650 1550
+Wire Wire Line
+	2350 1650 2650 1650
+Wire Wire Line
+	2350 1750 2650 1750
+Wire Wire Line
+	2350 1850 2650 1850
+Wire Wire Line
+	2350 1950 2650 1950
+Wire Wire Line
+	2350 2150 2650 2150
+Wire Wire Line
+	2350 2250 2650 2250
+Wire Wire Line
+	2350 2350 2650 2350
+Wire Wire Line
+	2350 2450 2650 2450
+Wire Wire Line
+	2350 2750 2650 2750
+NoConn ~ 2350 2050
+NoConn ~ 2350 2550
+NoConn ~ 2350 2650
+NoConn ~ 2350 2850
+NoConn ~ 2350 2950
+$Comp
+L power:VCC #PWR0101
+U 1 1 5EEFB8A4
+P 1850 900
+F 0 "#PWR0101" H 1850 750 50  0001 C CNN
+F 1 "VCC" H 1867 1073 50  0000 C CNN
+F 2 "" H 1850 900 50  0001 C CNN
+F 3 "" H 1850 900 50  0001 C CNN
+	1    1850 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 900  1850 1000
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5EEFD290
+P 2000 1000
+F 0 "#FLG0101" H 2000 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 2000 1128 50  0000 L CNN
+F 2 "" H 2000 1000 50  0001 C CNN
+F 3 "~" H 2000 1000 50  0001 C CNN
+	1    2000 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 1000 2000 1000
+Connection ~ 1850 1000
+Wire Wire Line
+	1850 1000 1850 1250
+$Comp
+L power:GND #PWR0102
+U 1 1 5EF00A65
+P 1850 3600
+F 0 "#PWR0102" H 1850 3350 50  0001 C CNN
+F 1 "GND" H 1855 3427 50  0000 C CNN
+F 2 "" H 1850 3600 50  0001 C CNN
+F 3 "" H 1850 3600 50  0001 C CNN
+	1    1850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5EF026D4
+P 1550 3500
+F 0 "#FLG0102" H 1550 3575 50  0001 C CNN
+F 1 "PWR_FLAG" V 1550 3627 50  0000 L CNN
+F 2 "" H 1550 3500 50  0001 C CNN
+F 3 "~" H 1550 3500 50  0001 C CNN
+	1    1550 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 1250 4450 1250
+Connection ~ 1850 1250
+Wire Wire Line
+	1850 3350 1850 3500
+Wire Wire Line
+	1550 3500 1850 3500
+Connection ~ 1850 3500
+Wire Wire Line
+	1850 3500 1850 3600
+Wire Wire Line
+	1850 3350 2950 3350
+Wire Wire Line
+	4450 3350 4450 3000
+Connection ~ 1850 3350
+Wire Wire Line
+	4450 1250 6250 1250
+Wire Wire Line
+	6250 1250 6250 3600
+Wire Wire Line
+	6250 3600 4450 3600
+Connection ~ 4450 1250
+Wire Wire Line
+	2950 3350 2950 5400
+Wire Wire Line
+	2950 5400 4450 5400
+Wire Wire Line
+	4450 5400 4450 5100
+Connection ~ 2950 3350
+Wire Wire Line
+	2950 3350 4450 3350
+Wire Wire Line
+	6250 1250 7800 1250
+Connection ~ 6250 1250
+Wire Wire Line
+	7800 2450 7800 3000
+Connection ~ 4450 3000
+Wire Wire Line
+	4450 3000 4450 2750
+Text GLabel 7050 1550 0    35   Input ~ 0
+~A0
+Text GLabel 7050 1650 0    35   Input ~ 0
+~A1
+Text GLabel 7050 1750 0    35   Input ~ 0
+~A2
+Text GLabel 7050 1850 0    35   Input ~ 0
+~A3
+Text GLabel 8700 1550 2    50   Output ~ 0
+F0
+Text GLabel 8700 1650 2    50   Output ~ 0
+F1
+Text GLabel 8700 1750 2    50   Output ~ 0
+F2
+Text GLabel 8700 1850 2    50   Output ~ 0
+F3
+Wire Wire Line
+	7050 1550 7300 1550
+Wire Wire Line
+	7050 1650 7300 1650
+Wire Wire Line
+	7050 1750 7300 1750
+Wire Wire Line
+	7050 1850 7300 1850
+Wire Wire Line
+	8300 1550 8700 1550
+Wire Wire Line
+	8300 1650 8700 1650
+Wire Wire Line
+	8300 1750 8700 1750
+Wire Wire Line
+	8300 1850 8700 1850
+Text GLabel 7050 2050 0    35   Input ~ 0
+~FNOTA
+Text Notes 8950 1750 0    79   ~ 0
+~A
+Wire Wire Line
+	4450 3000 7300 3000
+Wire Wire Line
+	7050 2050 7300 2050
+Wire Wire Line
+	7300 2150 7300 3000
+Connection ~ 7300 3000
+Wire Wire Line
+	7300 3000 7800 3000
+Wire Wire Line
+	7800 1250 10500 1250
+Wire Wire Line
+	11250 1250 11250 1450
+Connection ~ 7800 1250
+Wire Wire Line
+	7800 3000 10500 3000
+Wire Wire Line
+	11250 3000 11250 2450
+Connection ~ 7800 3000
+Text GLabel 10300 2100 0    35   Input ~ 0
+~A0
+Text GLabel 10300 2200 0    35   Input ~ 0
+~A1
+Text GLabel 10300 2300 0    35   Input ~ 0
+~A2
+Text GLabel 10300 2400 0    35   Input ~ 0
+~A3
+Wire Wire Line
+	10300 2100 10700 2100
+Wire Wire Line
+	10300 2200 10700 2200
+Wire Wire Line
+	10300 2300 10700 2300
+Wire Wire Line
+	10300 2400 10700 2400
+Wire Wire Line
+	10700 1650 10500 1650
+Wire Wire Line
+	10500 1650 10500 1750
+Connection ~ 10500 3000
+Wire Wire Line
+	10500 3000 11250 3000
+Wire Wire Line
+	10700 1750 10500 1750
+Connection ~ 10500 1750
+Wire Wire Line
+	10500 1750 10500 1850
+Wire Wire Line
+	10700 1850 10500 1850
+Connection ~ 10500 1850
+Wire Wire Line
+	10500 1850 10500 1950
+Wire Wire Line
+	10700 1950 10500 1950
+Connection ~ 10500 1950
+Wire Wire Line
+	10500 1950 10500 3000
+Wire Wire Line
+	10700 1500 10500 1500
+Wire Wire Line
+	10500 1500 10500 1250
+Connection ~ 10500 1250
+Wire Wire Line
+	10500 1250 11250 1250
+NoConn ~ 11800 2250
+Wire Wire Line
+	11250 1250 13000 1250
+Wire Wire Line
+	13000 1250 13000 1350
+Connection ~ 11250 1250
+Wire Wire Line
+	11250 3000 12500 3000
+Wire Wire Line
+	13000 3000 13000 2550
+Connection ~ 11250 3000
+Wire Wire Line
+	11800 1650 12250 1650
+Wire Wire Line
+	11800 1750 12150 1750
+Wire Wire Line
+	11800 1850 12050 1850
+Wire Wire Line
+	11800 1950 11950 1950
+Wire Wire Line
+	12500 2250 12500 3000
+Connection ~ 12500 3000
+Wire Wire Line
+	12500 3000 13000 3000
+Text GLabel 12300 2150 0    35   Input ~ 0
+~FNEGA
+Wire Wire Line
+	12300 2150 12500 2150
+Text GLabel 13900 1650 2    50   Output ~ 0
+F0
+Text GLabel 13900 1750 2    50   Output ~ 0
+F1
+Text GLabel 13900 1850 2    50   Output ~ 0
+F2
+Text GLabel 13900 1950 2    50   Output ~ 0
+F3
+Wire Wire Line
+	13500 1650 13900 1650
+Wire Wire Line
+	13500 1750 13900 1750
+Wire Wire Line
+	13500 1850 13900 1850
+Wire Wire Line
+	13500 1950 13900 1950
+Text Notes 14100 1850 0    79   ~ 0
+-A
+$Comp
+L 74xx:74LS08 U17
+U 1 1 5EFEFE62
+P 1600 4400
+F 0 "U17" H 1600 4725 50  0000 C CNN
+F 1 "74LS08" H 1600 4634 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1600 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1600 4400 50  0001 C CNN
+	1    1600 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U17
+U 2 1 5EFF0BA6
+P 1600 4950
+F 0 "U17" H 1600 5275 50  0000 C CNN
+F 1 "74LS08" H 1600 5184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1600 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1600 4950 50  0001 C CNN
+	2    1600 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U17
+U 3 1 5EFF1396
+P 1600 5500
+F 0 "U17" H 1600 5825 50  0000 C CNN
+F 1 "74LS08" H 1600 5734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1600 5500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1600 5500 50  0001 C CNN
+	3    1600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U18
+U 1 1 5EFF30A0
+P 14350 3100
+F 0 "U18" H 14350 3425 50  0000 C CNN
+F 1 "74LS08" H 14350 3334 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 14350 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 14350 3100 50  0001 C CNN
+	1    14350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U17
+U 5 1 5EFF6304
+P 1250 13550
+F 0 "U17" H 1480 13596 50  0000 L CNN
+F 1 "74LS08" H 1480 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1250 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1250 13550 50  0001 C CNN
+	5    1250 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5EFF6CCB
+P 5000 12700
+F 0 "#PWR0103" H 5000 12550 50  0001 C CNN
+F 1 "VCC" H 5017 12873 50  0000 C CNN
+F 2 "" H 5000 12700 50  0001 C CNN
+F 3 "" H 5000 12700 50  0001 C CNN
+	1    5000 12700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5EFF6FF0
+P 5000 14400
+F 0 "#PWR0104" H 5000 14150 50  0001 C CNN
+F 1 "GND" H 5005 14227 50  0000 C CNN
+F 2 "" H 5000 14400 50  0001 C CNN
+F 3 "" H 5000 14400 50  0001 C CNN
+	1    5000 14400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 12700 5000 12900
+Wire Wire Line
+	1250 14050 1250 14200
+Text GLabel 1100 4300 0    35   Input ~ 0
+~FADD
+Text GLabel 1100 4500 0    35   Input ~ 0
+~FADDC
+Text GLabel 1100 4850 0    35   Input ~ 0
+~FSUB
+Text GLabel 1100 5050 0    35   Input ~ 0
+~FSUBC
+Text GLabel 1100 5400 0    35   Input ~ 0
+~FADDC
+Text GLabel 1100 5600 0    35   Input ~ 0
+~FSUBC
+Text GLabel 2150 4400 2    35   Output ~ 0
+~ADD
+Text GLabel 2150 4950 2    35   Output ~ 0
+~SUB
+Text GLabel 2150 5500 2    35   Output ~ 0
+~CE
+Wire Wire Line
+	1100 4300 1300 4300
+Wire Wire Line
+	1100 4500 1300 4500
+Wire Wire Line
+	1100 4850 1300 4850
+Wire Wire Line
+	1100 5050 1300 5050
+Wire Wire Line
+	1100 5400 1300 5400
+Wire Wire Line
+	1100 5600 1300 5600
+Wire Wire Line
+	1900 4400 2150 4400
+Wire Wire Line
+	1900 4950 2150 4950
+Wire Wire Line
+	1900 5500 2150 5500
+$Comp
+L 74xx:74LS04 U27
+U 1 1 5F0421C1
+P 13750 3200
+F 0 "U27" H 13750 3517 50  0000 C CNN
+F 1 "74LS04" H 13750 3426 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 13750 3200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 13750 3200 50  0001 C CNN
+	1    13750 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 13400 2700 0    50   Input ~ 0
+CLK
+Text GLabel 13350 3200 0    35   Input ~ 0
+~CLF
+Wire Wire Line
+	13000 1250 16900 1250
+Wire Wire Line
+	19200 1250 19200 1550
+Connection ~ 13000 1250
+Wire Wire Line
+	16900 1600 16900 1250
+Connection ~ 16900 1250
+Wire Wire Line
+	16900 1250 19200 1250
+Wire Wire Line
+	13000 3000 13000 3850
+Wire Wire Line
+	13000 3850 16200 3850
+Wire Wire Line
+	19200 3850 19200 3350
+Connection ~ 13000 3000
+Wire Wire Line
+	16900 3400 16900 3850
+Connection ~ 16900 3850
+Wire Wire Line
+	16900 3850 18500 3850
+Text GLabel 16150 1900 0    35   Input ~ 0
+COUT
+Text GLabel 16150 2000 0    35   Input ~ 0
+OVR
+Text GLabel 17600 1900 2    35   Output ~ 0
+CF
+Text GLabel 17600 2000 2    35   Output ~ 0
+OF
+Wire Wire Line
+	16400 2400 16200 2400
+Wire Wire Line
+	16200 2400 16200 2500
+Connection ~ 16200 3850
+Wire Wire Line
+	16200 3850 16900 3850
+Wire Wire Line
+	16400 2500 16200 2500
+Connection ~ 16200 2500
+Wire Wire Line
+	16200 2500 16200 3850
+Wire Wire Line
+	15700 3100 15700 3350
+Wire Wire Line
+	15700 3500 18200 3500
+Wire Wire Line
+	18200 3500 18200 3050
+Wire Wire Line
+	18200 3050 18700 3050
+Wire Wire Line
+	15700 3100 16400 3100
+Wire Wire Line
+	18700 2350 18500 2350
+Wire Wire Line
+	18500 2350 18500 2450
+Connection ~ 18500 3850
+Wire Wire Line
+	18500 3850 19100 3850
+Wire Wire Line
+	18700 2450 18500 2450
+Connection ~ 18500 2450
+Wire Wire Line
+	18500 2450 18500 3850
+Text GLabel 15950 2900 0    50   Input ~ 0
+CLK
+Text GLabel 15950 2700 0    35   Input ~ 0
+~LDF
+Text GLabel 18250 2850 0    50   Input ~ 0
+CLK
+Text GLabel 18250 2650 0    35   Input ~ 0
+~LDF
+Wire Wire Line
+	15950 2700 16300 2700
+Wire Wire Line
+	16400 2800 16300 2800
+Wire Wire Line
+	16300 2800 16300 2700
+Connection ~ 16300 2700
+Wire Wire Line
+	16300 2700 16400 2700
+Wire Wire Line
+	18250 2650 18600 2650
+Wire Wire Line
+	18700 2750 18600 2750
+Wire Wire Line
+	18600 2750 18600 2650
+Connection ~ 18600 2650
+Wire Wire Line
+	18600 2650 18700 2650
+Wire Wire Line
+	15950 2900 16400 2900
+Wire Wire Line
+	18250 2850 18700 2850
+Wire Wire Line
+	16150 1900 16400 1900
+Wire Wire Line
+	16150 2000 16400 2000
+Wire Wire Line
+	16400 2100 16200 2100
+Wire Wire Line
+	16200 2100 16200 2200
+Connection ~ 16200 2400
+Wire Wire Line
+	16400 2200 16200 2200
+Connection ~ 16200 2200
+Wire Wire Line
+	16200 2200 16200 2400
+NoConn ~ 17400 2100
+NoConn ~ 17400 2200
+Wire Wire Line
+	17400 1900 17600 1900
+Wire Wire Line
+	17400 2000 17600 2000
+Text GLabel 18400 1850 0    35   Input ~ 0
+ZERO
+Text GLabel 18400 1950 0    35   Input ~ 0
+CMPE
+Text GLabel 18400 2050 0    35   Input ~ 0
+CMPL
+Text GLabel 18400 2150 0    35   Input ~ 0
+CMPG
+Text GLabel 19950 1850 2    35   Output ~ 0
+ZF
+Text GLabel 19950 1950 2    35   Output ~ 0
+EF
+Text GLabel 19950 2050 2    35   Output ~ 0
+LF
+Text GLabel 19950 2150 2    35   Output ~ 0
+GF
+Wire Wire Line
+	18400 1850 18700 1850
+Wire Wire Line
+	18400 1950 18700 1950
+Wire Wire Line
+	18400 2050 18700 2050
+Wire Wire Line
+	18400 2150 18700 2150
+Wire Wire Line
+	19700 1850 19950 1850
+Wire Wire Line
+	19700 1950 19950 1950
+Wire Wire Line
+	19700 2050 19950 2050
+Wire Wire Line
+	19700 2150 19950 2150
+$Comp
+L 74xx:74LS04 U27
+U 7 1 5F1A9E41
+P 8750 13550
+F 0 "U27" H 8980 13596 50  0000 L CNN
+F 1 "74LS04" H 8980 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8750 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8750 13550 50  0001 C CNN
+	7    8750 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 12900 2000 12900
+Wire Wire Line
+	2000 12900 2000 13050
+Wire Wire Line
+	1250 12900 1250 13050
+Wire Wire Line
+	1250 14200 2000 14200
+Wire Wire Line
+	2000 14200 2000 14050
+Wire Wire Line
+	5000 14200 5000 14400
+Wire Wire Line
+	7800 3950 10150 3950
+Wire Wire Line
+	12100 3950 12100 4050
+Wire Wire Line
+	10150 4150 10150 3950
+Connection ~ 10150 3950
+Wire Wire Line
+	10150 3950 12100 3950
+$Comp
+L power:VCC #PWR0105
+U 1 1 5F215464
+P 10150 3650
+F 0 "#PWR0105" H 10150 3500 50  0001 C CNN
+F 1 "VCC" H 10167 3823 50  0000 C CNN
+F 2 "" H 10150 3650 50  0001 C CNN
+F 3 "" H 10150 3650 50  0001 C CNN
+	1    10150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3650 10150 3950
+Text GLabel 7050 4250 0    35   Input ~ 0
+B0
+Text GLabel 7050 4550 0    35   Input ~ 0
+B1
+Text GLabel 7050 4850 0    35   Input ~ 0
+B2
+Text GLabel 7050 5150 0    35   Input ~ 0
+B3
+Text GLabel 7050 4350 0    35   Input ~ 0
+~B0
+Text GLabel 7050 4650 0    35   Input ~ 0
+~B1
+Text GLabel 7050 4950 0    35   Input ~ 0
+~B2
+Text GLabel 7050 5250 0    35   Input ~ 0
+~B3
+Wire Wire Line
+	7050 4250 7300 4250
+Wire Wire Line
+	7050 4350 7300 4350
+Wire Wire Line
+	7050 4550 7300 4550
+Wire Wire Line
+	7050 4650 7300 4650
+Wire Wire Line
+	7050 4850 7300 4850
+Wire Wire Line
+	7050 4950 7300 4950
+Wire Wire Line
+	7050 5150 7300 5150
+Wire Wire Line
+	7050 5250 7300 5250
+Wire Wire Line
+	7800 5850 7800 6050
+Wire Wire Line
+	7800 6050 10150 6050
+Wire Wire Line
+	12100 6050 12100 5250
+Wire Wire Line
+	10150 5150 10150 6050
+Connection ~ 10150 6050
+Wire Wire Line
+	10150 6050 11500 6050
+$Comp
+L power:GND #PWR0106
+U 1 1 5F2EA625
+P 10150 6200
+F 0 "#PWR0106" H 10150 5950 50  0001 C CNN
+F 1 "GND" H 10155 6027 50  0000 C CNN
+F 2 "" H 10150 6200 50  0001 C CNN
+F 3 "" H 10150 6200 50  0001 C CNN
+	1    10150 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 6050 10150 6200
+Text GLabel 9300 4350 0    35   Input ~ 0
+A0
+Text GLabel 9300 4450 0    35   Input ~ 0
+A1
+Text GLabel 9300 4550 0    35   Input ~ 0
+A2
+Text GLabel 9300 4650 0    35   Input ~ 0
+A3
+Wire Wire Line
+	9300 4350 9600 4350
+Wire Wire Line
+	9300 4450 9600 4450
+Wire Wire Line
+	9300 4550 9600 4550
+Wire Wire Line
+	9300 4650 9600 4650
+Wire Wire Line
+	8300 5150 8950 5150
+Wire Wire Line
+	9150 5150 9150 5100
+Wire Wire Line
+	9150 5100 9600 5100
+Wire Wire Line
+	8300 4850 8750 4850
+Wire Wire Line
+	8750 4850 8750 5000
+Wire Wire Line
+	8750 5000 9600 5000
+Wire Wire Line
+	8300 4550 8800 4550
+Wire Wire Line
+	8800 4550 8800 4900
+Wire Wire Line
+	8800 4900 9600 4900
+Wire Wire Line
+	8300 4250 8850 4250
+Wire Wire Line
+	8850 4250 8850 4800
+Wire Wire Line
+	8850 4800 9600 4800
+Wire Wire Line
+	10700 4350 11250 4350
+Wire Wire Line
+	10700 4450 11150 4450
+Wire Wire Line
+	10700 4550 11050 4550
+Text GLabel 13000 4350 2    50   Output ~ 0
+F0
+Text GLabel 13000 4450 2    50   Output ~ 0
+F1
+Text GLabel 13000 4550 2    50   Output ~ 0
+F2
+Text GLabel 13000 4650 2    50   Output ~ 0
+F3
+Wire Wire Line
+	12600 4350 13000 4350
+Wire Wire Line
+	12600 4450 13000 4450
+Wire Wire Line
+	12600 4550 13000 4550
+Wire Wire Line
+	12600 4650 13000 4650
+Text GLabel 9300 4200 0    35   Input ~ 0
+C0
+Wire Wire Line
+	9300 4200 9600 4200
+Text GLabel 10850 4950 2    35   Output ~ 0
+C4
+Wire Wire Line
+	10700 4950 10850 4950
+Wire Wire Line
+	11600 4950 11500 4950
+Wire Wire Line
+	11500 4950 11500 6050
+Connection ~ 11500 6050
+Wire Wire Line
+	11500 6050 12100 6050
+Text GLabel 11350 4850 0    35   Input ~ 0
+~AORS
+Wire Wire Line
+	11350 4850 11600 4850
+$Comp
+L 74xx:74LS08 U17
+U 4 1 5F449D04
+P 1600 6250
+F 0 "U17" H 1600 6575 50  0000 C CNN
+F 1 "74LS08" H 1600 6484 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1600 6250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1600 6250 50  0001 C CNN
+	4    1600 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U18
+U 5 1 5F44B7C8
+P 2000 13550
+F 0 "U18" H 2230 13596 50  0000 L CNN
+F 1 "74LS08" H 2230 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2000 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 2000 13550 50  0001 C CNN
+	5    2000 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 12900 2750 12900
+Wire Wire Line
+	2750 12900 2750 13050
+Connection ~ 2000 12900
+Wire Wire Line
+	2000 14200 2750 14200
+Wire Wire Line
+	2750 14200 2750 14050
+Connection ~ 2000 14200
+Text GLabel 1050 6150 0    35   Input ~ 0
+~ADD
+Text GLabel 1050 6350 0    35   Input ~ 0
+~SUB
+Text GLabel 2150 6250 2    35   Output ~ 0
+~AORS
+Wire Wire Line
+	1050 6150 1300 6150
+Wire Wire Line
+	1050 6350 1300 6350
+Wire Wire Line
+	1900 6250 2150 6250
+Text GLabel 7050 5450 0    35   Input ~ 0
+~ADD
+Wire Wire Line
+	7050 5450 7300 5450
+Wire Wire Line
+	7300 5550 7300 6050
+Wire Wire Line
+	7300 6050 7800 6050
+Connection ~ 7800 6050
+$Comp
+L 74xx:74LS04 U26
+U 2 1 5F516DA7
+P 3700 6250
+F 0 "U26" H 3700 6567 50  0000 C CNN
+F 1 "74LS04" H 3700 6476 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3700 6250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3700 6250 50  0001 C CNN
+	2    3700 6250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3150 6250 0    35   Input ~ 0
+~CE
+Wire Wire Line
+	3150 6250 3350 6250
+$Comp
+L 74xx:74LS08 U19
+U 1 1 5F5345A0
+P 4750 6350
+F 0 "U19" H 4750 6675 50  0000 C CNN
+F 1 "74LS08" H 4750 6584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 6350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4750 6350 50  0001 C CNN
+	1    4750 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U19
+U 2 1 5F536F9F
+P 4750 6900
+F 0 "U19" H 4750 7225 50  0000 C CNN
+F 1 "74LS08" H 4750 7134 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 6900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4750 6900 50  0001 C CNN
+	2    4750 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U22
+U 1 1 5F5383A7
+P 5750 6600
+F 0 "U22" H 5750 6925 50  0000 C CNN
+F 1 "74LS32" H 5750 6834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 6600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5750 6600 50  0001 C CNN
+	1    5750 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 3 1 5F538FFB
+P 3700 7000
+F 0 "U26" H 3700 7317 50  0000 C CNN
+F 1 "74LS04" H 3700 7226 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3700 7000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3700 7000 50  0001 C CNN
+	3    3700 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3150 6450 0    35   Input ~ 0
+CF
+Text GLabel 3150 7000 0    35   Input ~ 0
+~SUB
+Wire Wire Line
+	4000 6250 4450 6250
+Wire Wire Line
+	3350 6250 3350 6800
+Wire Wire Line
+	3350 6800 4450 6800
+Connection ~ 3350 6250
+Wire Wire Line
+	3350 6250 3400 6250
+Wire Wire Line
+	3150 7000 3400 7000
+Wire Wire Line
+	4000 7000 4450 7000
+Wire Wire Line
+	5050 6350 5250 6350
+Wire Wire Line
+	5250 6350 5250 6500
+Wire Wire Line
+	5250 6500 5450 6500
+Wire Wire Line
+	5050 6900 5250 6900
+Wire Wire Line
+	5250 6900 5250 6700
+Wire Wire Line
+	5250 6700 5450 6700
+Text GLabel 6250 6600 2    35   Output ~ 0
+C0
+Wire Wire Line
+	6050 6600 6250 6600
+Wire Wire Line
+	3150 6450 4450 6450
+$Comp
+L 74xx:74LS32 U23
+U 5 1 5F615704
+P 5750 13550
+F 0 "U23" H 5980 13596 50  0000 L CNN
+F 1 "74LS32" H 5980 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5750 13550 50  0001 C CNN
+	5    5750 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 12900 3500 12900
+Wire Wire Line
+	3500 12900 3500 13050
+Connection ~ 2750 12900
+Wire Wire Line
+	3500 14050 3500 14200
+Wire Wire Line
+	3500 14200 2750 14200
+Connection ~ 2750 14200
+$Comp
+L 74xx:74LS86 U24
+U 1 1 5F64A0CF
+P 7800 6600
+F 0 "U24" H 7800 6925 50  0000 C CNN
+F 1 "74LS86" H 7800 6834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7800 6600 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 7800 6600 50  0001 C CNN
+	1    7800 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U24
+U 2 1 5F64A857
+P 7800 7150
+F 0 "U24" H 7800 7475 50  0000 C CNN
+F 1 "74LS86" H 7800 7384 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7800 7150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 7800 7150 50  0001 C CNN
+	2    7800 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 4 1 5F652E50
+P 8550 7150
+F 0 "U26" H 8550 7467 50  0000 C CNN
+F 1 "74LS04" H 8550 7376 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8550 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8550 7150 50  0001 C CNN
+	4    8550 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U18
+U 2 1 5F653908
+P 9450 6850
+F 0 "U18" H 9450 7175 50  0000 C CNN
+F 1 "74LS08" H 9450 7084 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9450 6850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9450 6850 50  0001 C CNN
+	2    9450 6850
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 5400 2    35   Output ~ 0
+ADD_B3
+Wire Wire Line
+	8950 5150 8950 5400
+Wire Wire Line
+	8950 5400 9100 5400
+Connection ~ 8950 5150
+Wire Wire Line
+	8950 5150 9150 5150
+Text GLabel 7200 6500 0    35   Input ~ 0
+S3
+Text GLabel 7200 6850 0    35   Input ~ 0
+ADD_B3
+Text GLabel 7200 7250 0    35   Input ~ 0
+A3
+Wire Wire Line
+	7200 6500 7500 6500
+Wire Wire Line
+	7500 6700 7400 6700
+Wire Wire Line
+	7400 6700 7400 6850
+Wire Wire Line
+	7400 7050 7500 7050
+Wire Wire Line
+	7200 6850 7400 6850
+Connection ~ 7400 6850
+Wire Wire Line
+	7400 6850 7400 7050
+Wire Wire Line
+	7200 7250 7500 7250
+Wire Wire Line
+	8100 7150 8250 7150
+Wire Wire Line
+	8850 7150 9000 7150
+Wire Wire Line
+	9000 7150 9000 6950
+Wire Wire Line
+	9000 6950 9150 6950
+Wire Wire Line
+	8100 6600 9000 6600
+Wire Wire Line
+	9000 6600 9000 6750
+Wire Wire Line
+	9000 6750 9150 6750
+$Comp
+L 74xx:74LS86 U25
+U 5 1 5F75FB64
+P 7250 13550
+F 0 "U25" H 7480 13596 50  0000 L CNN
+F 1 "74LS86" H 7480 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7250 13550 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 7250 13550 50  0001 C CNN
+	5    7250 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 12900 4250 12900
+Wire Wire Line
+	4250 12900 4250 13050
+Connection ~ 3500 12900
+Wire Wire Line
+	3500 14200 4250 14200
+Wire Wire Line
+	4250 14200 4250 14050
+Connection ~ 3500 14200
+$Comp
+L 74xx:74LS08 U18
+U 3 1 5F79D045
+P 11250 6950
+F 0 "U18" H 11250 7275 50  0000 C CNN
+F 1 "74LS08" H 11250 7184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 11250 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 11250 6950 50  0001 C CNN
+	3    11250 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U18
+U 4 1 5F79D8CB
+P 11250 7500
+F 0 "U18" H 11250 7825 50  0000 C CNN
+F 1 "74LS08" H 11250 7734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 11250 7500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 11250 7500 50  0001 C CNN
+	4    11250 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 5 1 5F7C2D34
+P 10300 7250
+F 0 "U26" H 10300 7567 50  0000 C CNN
+F 1 "74LS04" H 10300 7476 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10300 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10300 7250 50  0001 C CNN
+	5    10300 7250
+	1    0    0    -1  
+$EndComp
+Text GLabel 9850 7250 0    35   Input ~ 0
+~AORS
+Text GLabel 10600 7600 0    35   Input ~ 0
+C4
+Wire Wire Line
+	9750 6850 10950 6850
+Wire Wire Line
+	9850 7250 10000 7250
+Wire Wire Line
+	10600 7600 10950 7600
+Wire Wire Line
+	10950 7050 10850 7050
+Wire Wire Line
+	10850 7050 10850 7250
+Wire Wire Line
+	10850 7400 10950 7400
+Wire Wire Line
+	10600 7250 10850 7250
+Connection ~ 10850 7250
+Wire Wire Line
+	10850 7250 10850 7400
+Text GLabel 11900 6950 2    35   Output ~ 0
+OVR
+Text GLabel 11900 7500 2    35   Output ~ 0
+COUT
+Wire Wire Line
+	11550 6950 11900 6950
+Wire Wire Line
+	11550 7500 11900 7500
+$Comp
+L 74xx:74LS08 U19
+U 5 1 5F8CB5C9
+P 2750 13550
+F 0 "U19" H 2980 13596 50  0000 L CNN
+F 1 "74LS08" H 2980 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2750 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 2750 13550 50  0001 C CNN
+	5    2750 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 12900 5000 12900
+Wire Wire Line
+	5000 12900 5000 13050
+Connection ~ 4250 12900
+Wire Wire Line
+	4250 14200 5000 14200
+Wire Wire Line
+	5000 14200 5000 14050
+Connection ~ 4250 14200
+Wire Wire Line
+	10700 4650 10950 4650
+Text GLabel 11250 3800 1    35   Output ~ 0
+S0
+Text GLabel 11150 3800 1    35   Output ~ 0
+S1
+Text GLabel 11050 3800 1    35   Output ~ 0
+S2
+Text GLabel 10950 3800 1    35   Output ~ 0
+S3
+Wire Wire Line
+	11250 3800 11250 4350
+Connection ~ 11250 4350
+Wire Wire Line
+	11250 4350 11600 4350
+Wire Wire Line
+	11150 3800 11150 4450
+Connection ~ 11150 4450
+Wire Wire Line
+	11150 4450 11600 4450
+Wire Wire Line
+	11050 3800 11050 4550
+Connection ~ 11050 4550
+Wire Wire Line
+	11050 4550 11600 4550
+Wire Wire Line
+	10950 3800 10950 4650
+Connection ~ 10950 4650
+Wire Wire Line
+	10950 4650 11600 4650
+Text GLabel 12250 1050 1    35   Output ~ 0
+-A0
+Text GLabel 12150 1050 1    35   Output ~ 0
+-A1
+Text GLabel 12050 1050 1    35   Output ~ 0
+-A2
+Text GLabel 11950 1050 1    35   Output ~ 0
+-A3
+Wire Wire Line
+	12250 1050 12250 1650
+Connection ~ 12250 1650
+Wire Wire Line
+	12250 1650 12500 1650
+Wire Wire Line
+	12150 1050 12150 1750
+Connection ~ 12150 1750
+Wire Wire Line
+	12150 1750 12500 1750
+Wire Wire Line
+	12050 1050 12050 1850
+Connection ~ 12050 1850
+Wire Wire Line
+	12050 1850 12500 1850
+Wire Wire Line
+	11950 1050 11950 1950
+Connection ~ 11950 1950
+Wire Wire Line
+	11950 1950 12500 1950
+$Comp
+L 74xx:74LS32 U22
+U 2 1 5FB16527
+P 14500 4500
+F 0 "U22" H 14500 4825 50  0000 C CNN
+F 1 "74LS32" H 14500 4734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 14500 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 14500 4500 50  0001 C CNN
+	2    14500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U22
+U 3 1 5FB16DB1
+P 14500 5050
+F 0 "U22" H 14500 5375 50  0000 C CNN
+F 1 "74LS32" H 14500 5284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 14500 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 14500 5050 50  0001 C CNN
+	3    14500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U22
+U 4 1 5FB17A75
+P 15500 4750
+F 0 "U22" H 15500 5075 50  0000 C CNN
+F 1 "74LS32" H 15500 4984 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 15500 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 15500 4750 50  0001 C CNN
+	4    15500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 6 1 5FB1C5EA
+P 16350 4750
+F 0 "U26" H 16350 5067 50  0000 C CNN
+F 1 "74LS04" H 16350 4976 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 16350 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 16350 4750 50  0001 C CNN
+	6    16350 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 13800 4400 0    35   Input ~ 0
+F0
+Text GLabel 13800 4600 0    35   Input ~ 0
+F1
+Text GLabel 13800 4950 0    35   Input ~ 0
+F2
+Text GLabel 13800 5150 0    35   Input ~ 0
+F3
+Text GLabel 17000 4750 2    35   Output ~ 0
+ZERO
+Wire Wire Line
+	13800 4400 14200 4400
+Wire Wire Line
+	13800 4600 14200 4600
+Wire Wire Line
+	13800 4950 14200 4950
+Wire Wire Line
+	13800 5150 14200 5150
+Wire Wire Line
+	14800 4500 15000 4500
+Wire Wire Line
+	15000 4500 15000 4650
+Wire Wire Line
+	15000 4650 15200 4650
+Wire Wire Line
+	14800 5050 15000 5050
+Wire Wire Line
+	15000 5050 15000 4850
+Wire Wire Line
+	15000 4850 15200 4850
+Wire Wire Line
+	15800 4750 16050 4750
+Wire Wire Line
+	16650 4750 17000 4750
+$Comp
+L power:VCC #PWR0107
+U 1 1 5FCDCE21
+P 14650 6000
+F 0 "#PWR0107" H 14650 5850 50  0001 C CNN
+F 1 "VCC" H 14667 6173 50  0000 C CNN
+F 2 "" H 14650 6000 50  0001 C CNN
+F 3 "" H 14650 6000 50  0001 C CNN
+	1    14650 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5FCDD859
+P 14650 7900
+F 0 "#PWR0108" H 14650 7650 50  0001 C CNN
+F 1 "GND" H 14655 7727 50  0000 C CNN
+F 2 "" H 14650 7900 50  0001 C CNN
+F 3 "" H 14650 7900 50  0001 C CNN
+	1    14650 7900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14650 6000 14650 6150
+Wire Wire Line
+	14650 7700 14650 7800
+Text GLabel 13750 6900 0    35   Input ~ 0
+B0
+Text GLabel 13750 6800 0    35   Input ~ 0
+B1
+Text GLabel 13750 6700 0    35   Input ~ 0
+B2
+Text GLabel 13750 6600 0    35   Input ~ 0
+B3
+Text GLabel 13750 7400 0    35   Input ~ 0
+A0
+Text GLabel 13750 7300 0    35   Input ~ 0
+A1
+Text GLabel 13750 7200 0    35   Input ~ 0
+A2
+Text GLabel 13750 7100 0    35   Input ~ 0
+A3
+Text GLabel 17300 6400 2    35   Output ~ 0
+CMPG
+Text GLabel 17300 6950 2    35   Output ~ 0
+CMPL
+Text GLabel 17300 7500 2    35   Output ~ 0
+CMPE
+Wire Wire Line
+	13750 6600 14150 6600
+Wire Wire Line
+	13750 6700 14150 6700
+Wire Wire Line
+	13750 6800 14150 6800
+Wire Wire Line
+	13750 6900 14150 6900
+Wire Wire Line
+	13750 7100 14150 7100
+Wire Wire Line
+	13750 7200 14150 7200
+Wire Wire Line
+	13750 7300 14150 7300
+Wire Wire Line
+	13750 7400 14150 7400
+Wire Wire Line
+	15150 6800 15400 6800
+Wire Wire Line
+	15400 6800 15400 6150
+Wire Wire Line
+	15400 6150 14650 6150
+Connection ~ 14650 6150
+Wire Wire Line
+	14650 6150 14650 6300
+Wire Wire Line
+	15150 6600 15250 6600
+Wire Wire Line
+	15250 6600 15250 6700
+Wire Wire Line
+	15250 7800 14650 7800
+Connection ~ 14650 7800
+Wire Wire Line
+	14650 7800 14650 7900
+Wire Wire Line
+	15150 6700 15250 6700
+Connection ~ 15250 6700
+Wire Wire Line
+	15250 6700 15250 7800
+$Comp
+L 74xx:74LS08 U20
+U 1 1 5FFD0C29
+P 16750 6400
+F 0 "U20" H 16750 6725 50  0000 C CNN
+F 1 "74LS08" H 16750 6634 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 16750 6400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 16750 6400 50  0001 C CNN
+	1    16750 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U20
+U 2 1 5FFD1793
+P 16750 6950
+F 0 "U20" H 16750 7275 50  0000 C CNN
+F 1 "74LS08" H 16750 7184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 16750 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 16750 6950 50  0001 C CNN
+	2    16750 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U20
+U 3 1 5FFD28BC
+P 16750 7500
+F 0 "U20" H 16750 7825 50  0000 C CNN
+F 1 "74LS08" H 16750 7734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 16750 7500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 16750 7500 50  0001 C CNN
+	3    16750 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 1 1 60010998
+P 15900 5850
+F 0 "U26" H 15900 6167 50  0000 C CNN
+F 1 "74LS04" H 15900 6076 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 15900 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 15900 5850 50  0001 C CNN
+	1    15900 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15150 7400 16450 7400
+Wire Wire Line
+	15150 7300 15750 7300
+Wire Wire Line
+	15750 7300 15750 6850
+Wire Wire Line
+	15750 6850 16450 6850
+Wire Wire Line
+	15150 7200 15650 7200
+Wire Wire Line
+	15650 7200 15650 6300
+Wire Wire Line
+	15650 6300 16450 6300
+Wire Wire Line
+	16200 5850 16300 5850
+Wire Wire Line
+	16300 5850 16300 6500
+Wire Wire Line
+	16300 7600 16450 7600
+Wire Wire Line
+	16300 7050 16450 7050
+Connection ~ 16300 7050
+Wire Wire Line
+	16300 7050 16300 7600
+Wire Wire Line
+	16300 6500 16450 6500
+Connection ~ 16300 6500
+Wire Wire Line
+	16300 6500 16300 7050
+Wire Wire Line
+	17050 6400 17300 6400
+Wire Wire Line
+	17050 6950 17300 6950
+Wire Wire Line
+	17050 7500 17300 7500
+Text GLabel 15450 5850 0    35   Input ~ 0
+~FCMP
+Wire Wire Line
+	15450 5850 15600 5850
+$Comp
+L 74xx:74LS32 U23
+U 1 1 601D0996
+P 2100 8350
+F 0 "U23" H 2100 8675 50  0000 C CNN
+F 1 "74LS32" H 2100 8584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 8350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2100 8350 50  0001 C CNN
+	1    2100 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U23
+U 2 1 601D2D9C
+P 2100 8900
+F 0 "U23" H 2100 9225 50  0000 C CNN
+F 1 "74LS32" H 2100 9134 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 8900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2100 8900 50  0001 C CNN
+	2    2100 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U23
+U 3 1 601D52A6
+P 2100 9450
+F 0 "U23" H 2100 9775 50  0000 C CNN
+F 1 "74LS32" H 2100 9684 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 9450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2100 9450 50  0001 C CNN
+	3    2100 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U23
+U 4 1 601D7AD8
+P 2100 10000
+F 0 "U23" H 2100 10325 50  0000 C CNN
+F 1 "74LS32" H 2100 10234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 10000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2100 10000 50  0001 C CNN
+	4    2100 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U21
+U 1 1 601DA48D
+P 5650 8350
+F 0 "U21" H 5650 8675 50  0000 C CNN
+F 1 "74LS08" H 5650 8584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5650 8350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5650 8350 50  0001 C CNN
+	1    5650 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U21
+U 2 1 601DCC87
+P 5650 8900
+F 0 "U21" H 5650 9225 50  0000 C CNN
+F 1 "74LS08" H 5650 9134 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5650 8900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5650 8900 50  0001 C CNN
+	2    5650 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U21
+U 3 1 601DF932
+P 5650 9450
+F 0 "U21" H 5650 9775 50  0000 C CNN
+F 1 "74LS08" H 5650 9684 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5650 9450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5650 9450 50  0001 C CNN
+	3    5650 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U21
+U 4 1 601E24C1
+P 5650 10000
+F 0 "U21" H 5650 10325 50  0000 C CNN
+F 1 "74LS08" H 5650 10234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5650 10000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5650 10000 50  0001 C CNN
+	4    5650 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U25
+U 1 1 601E4FCA
+P 9200 8350
+F 0 "U25" H 9200 8675 50  0000 C CNN
+F 1 "74LS86" H 9200 8584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9200 8350 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9200 8350 50  0001 C CNN
+	1    9200 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U25
+U 2 1 601E8501
+P 9200 8900
+F 0 "U25" H 9200 9225 50  0000 C CNN
+F 1 "74LS86" H 9200 9134 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9200 8900 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9200 8900 50  0001 C CNN
+	2    9200 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U25
+U 3 1 601EB1DD
+P 9200 9450
+F 0 "U25" H 9200 9775 50  0000 C CNN
+F 1 "74LS86" H 9200 9684 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9200 9450 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9200 9450 50  0001 C CNN
+	3    9200 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U25
+U 4 1 601EDFA5
+P 9200 10000
+F 0 "U25" H 9200 10325 50  0000 C CNN
+F 1 "74LS86" H 9200 10234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9200 10000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9200 10000 50  0001 C CNN
+	4    9200 10000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 8250 0    35   Input ~ 0
+A0
+Text GLabel 1600 8800 0    35   Input ~ 0
+A1
+Text GLabel 1600 9350 0    35   Input ~ 0
+A2
+Text GLabel 1600 9900 0    35   Input ~ 0
+A3
+Text GLabel 1600 8450 0    35   Input ~ 0
+B0
+Text GLabel 1600 9000 0    35   Input ~ 0
+B1
+Text GLabel 1600 9550 0    35   Input ~ 0
+B2
+Text GLabel 1600 10100 0    35   Input ~ 0
+B3
+Wire Wire Line
+	1600 8250 1800 8250
+Wire Wire Line
+	1600 8450 1800 8450
+Wire Wire Line
+	1600 8800 1800 8800
+Wire Wire Line
+	1600 9000 1800 9000
+Wire Wire Line
+	1600 9350 1800 9350
+Wire Wire Line
+	1600 9550 1800 9550
+Wire Wire Line
+	1600 9900 1800 9900
+Wire Wire Line
+	1600 10100 1800 10100
+Wire Wire Line
+	2400 8350 3000 8350
+Wire Wire Line
+	2400 8900 2500 8900
+Wire Wire Line
+	2500 8900 2500 8450
+Wire Wire Line
+	2400 9450 2600 9450
+Wire Wire Line
+	2600 9450 2600 8550
+Wire Wire Line
+	2400 10000 2700 10000
+Wire Wire Line
+	2700 10000 2700 8650
+Wire Wire Line
+	2700 8650 3050 8650
+$Comp
+L power:GND #PWR0109
+U 1 1 60682002
+P 3550 10500
+F 0 "#PWR0109" H 3550 10250 50  0001 C CNN
+F 1 "GND" H 3555 10327 50  0000 C CNN
+F 2 "" H 3550 10500 50  0001 C CNN
+F 3 "" H 3550 10500 50  0001 C CNN
+	1    3550 10500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 9250 3550 9400
+$Comp
+L power:VCC #PWR0110
+U 1 1 606B2B25
+P 3550 7700
+F 0 "#PWR0110" H 3550 7550 50  0001 C CNN
+F 1 "VCC" H 3567 7873 50  0000 C CNN
+F 2 "" H 3550 7700 50  0001 C CNN
+F 3 "" H 3550 7700 50  0001 C CNN
+	1    3550 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 7700 3550 7800
+Wire Wire Line
+	3050 8950 3050 9400
+Wire Wire Line
+	3050 9400 3550 9400
+Connection ~ 3550 9400
+Wire Wire Line
+	3550 9400 3550 10400
+Text GLabel 2900 8850 0    35   Input ~ 0
+~FOR
+Wire Wire Line
+	2900 8850 3050 8850
+Text GLabel 4250 8350 2    35   Output ~ 0
+F0
+Text GLabel 4250 8450 2    35   Output ~ 0
+F1
+Text GLabel 4250 8550 2    35   Output ~ 0
+F2
+Text GLabel 4250 8650 2    35   Output ~ 0
+F3
+Wire Wire Line
+	4050 8350 4250 8350
+Wire Wire Line
+	4050 8450 4250 8450
+Wire Wire Line
+	4050 8550 4250 8550
+Wire Wire Line
+	4050 8650 4250 8650
+Text GLabel 5150 8250 0    35   Input ~ 0
+A0
+Text GLabel 5150 8800 0    35   Input ~ 0
+A1
+Text GLabel 5150 9350 0    35   Input ~ 0
+A2
+Text GLabel 5150 9900 0    35   Input ~ 0
+A3
+Text GLabel 5150 8450 0    35   Input ~ 0
+B0
+Text GLabel 5150 9000 0    35   Input ~ 0
+B1
+Text GLabel 5150 9550 0    35   Input ~ 0
+B2
+Text GLabel 5150 10100 0    35   Input ~ 0
+B3
+Wire Wire Line
+	5150 8250 5350 8250
+Wire Wire Line
+	5150 8450 5350 8450
+Wire Wire Line
+	5150 8800 5350 8800
+Wire Wire Line
+	5150 9000 5350 9000
+Wire Wire Line
+	5150 9350 5350 9350
+Wire Wire Line
+	5150 9550 5350 9550
+Wire Wire Line
+	5150 9900 5350 9900
+Wire Wire Line
+	5150 10100 5350 10100
+Wire Wire Line
+	5950 8350 6550 8350
+Wire Wire Line
+	5950 8900 6050 8900
+Wire Wire Line
+	6050 8900 6050 8450
+Wire Wire Line
+	6050 8450 6450 8450
+Wire Wire Line
+	5950 9450 6150 9450
+Wire Wire Line
+	6150 9450 6150 8550
+Wire Wire Line
+	6150 8550 6350 8550
+Wire Wire Line
+	5950 10000 6250 10000
+Wire Wire Line
+	6250 10000 6250 8650
+Wire Wire Line
+	6250 8650 6600 8650
+Text GLabel 6450 8850 0    35   Input ~ 0
+~FAND
+Wire Wire Line
+	6450 8850 6600 8850
+Wire Wire Line
+	3550 7800 7100 7800
+Wire Wire Line
+	7100 7800 7100 8050
+Connection ~ 3550 7800
+Wire Wire Line
+	3550 7800 3550 8050
+Wire Wire Line
+	3550 10400 7100 10400
+Wire Wire Line
+	7100 10400 7100 9400
+Connection ~ 3550 10400
+Wire Wire Line
+	3550 10400 3550 10500
+Wire Wire Line
+	6600 8950 6600 9400
+Wire Wire Line
+	6600 9400 7100 9400
+Connection ~ 7100 9400
+Wire Wire Line
+	7100 9400 7100 9250
+Text GLabel 8700 8250 0    35   Input ~ 0
+A0
+Text GLabel 8700 8800 0    35   Input ~ 0
+A1
+Text GLabel 8700 9350 0    35   Input ~ 0
+A2
+Text GLabel 8700 9900 0    35   Input ~ 0
+A3
+Text GLabel 8700 8450 0    35   Input ~ 0
+B0
+Text GLabel 8700 9000 0    35   Input ~ 0
+B1
+Text GLabel 8700 9550 0    35   Input ~ 0
+B2
+Text GLabel 8700 10100 0    35   Input ~ 0
+B3
+Wire Wire Line
+	8700 8250 8900 8250
+Wire Wire Line
+	8700 8450 8900 8450
+Wire Wire Line
+	8700 8800 8900 8800
+Wire Wire Line
+	8700 9000 8900 9000
+Wire Wire Line
+	8700 9350 8900 9350
+Wire Wire Line
+	8700 9550 8900 9550
+Wire Wire Line
+	8700 9900 8900 9900
+Wire Wire Line
+	8700 10100 8900 10100
+Wire Wire Line
+	9500 8350 10100 8350
+Wire Wire Line
+	9500 8900 9600 8900
+Wire Wire Line
+	9600 8900 9600 8450
+Wire Wire Line
+	9600 8450 10000 8450
+Wire Wire Line
+	9500 9450 9700 9450
+Wire Wire Line
+	9700 9450 9700 8550
+Wire Wire Line
+	9700 8550 9900 8550
+Wire Wire Line
+	9500 10000 9800 10000
+Wire Wire Line
+	9800 10000 9800 8650
+Wire Wire Line
+	9800 8650 10150 8650
+Text GLabel 10000 8850 0    35   Input ~ 0
+~FXOR
+Wire Wire Line
+	10000 8850 10150 8850
+Wire Wire Line
+	7100 10400 10650 10400
+Wire Wire Line
+	10650 10400 10650 9400
+Connection ~ 7100 10400
+Wire Wire Line
+	10150 8950 10150 9400
+Wire Wire Line
+	10150 9400 10650 9400
+Connection ~ 10650 9400
+Wire Wire Line
+	10650 9400 10650 9250
+Wire Wire Line
+	7100 7800 10650 7800
+Wire Wire Line
+	10650 7800 10650 8050
+Connection ~ 7100 7800
+Text GLabel 13800 8350 2    35   Output ~ 0
+D0
+Text GLabel 13800 8450 2    35   Output ~ 0
+D1
+Text GLabel 13800 8550 2    35   Output ~ 0
+D2
+Text GLabel 13800 8650 2    35   Output ~ 0
+D3
+Wire Wire Line
+	13600 8350 13800 8350
+Wire Wire Line
+	13600 8450 13800 8450
+Wire Wire Line
+	13600 8550 13800 8550
+Wire Wire Line
+	13600 8650 13800 8650
+Text GLabel 7800 8350 2    35   Output ~ 0
+F0
+Text GLabel 7800 8450 2    35   Output ~ 0
+F1
+Text GLabel 7800 8550 2    35   Output ~ 0
+F2
+Text GLabel 7800 8650 2    35   Output ~ 0
+F3
+Wire Wire Line
+	7600 8350 7800 8350
+Wire Wire Line
+	7600 8450 7800 8450
+Wire Wire Line
+	7600 8550 7800 8550
+Wire Wire Line
+	7600 8650 7800 8650
+Text GLabel 11350 8350 2    35   Output ~ 0
+F0
+Text GLabel 11350 8450 2    35   Output ~ 0
+F1
+Text GLabel 11350 8550 2    35   Output ~ 0
+F2
+Text GLabel 11350 8650 2    35   Output ~ 0
+F3
+Wire Wire Line
+	11150 8350 11350 8350
+Wire Wire Line
+	11150 8450 11350 8450
+Wire Wire Line
+	11150 8550 11350 8550
+Wire Wire Line
+	11150 8650 11350 8650
+Text GLabel 12250 8350 0    35   Input ~ 0
+F0
+Text GLabel 12250 8450 0    35   Input ~ 0
+F1
+Text GLabel 12250 8550 0    35   Input ~ 0
+F2
+Text GLabel 12250 8650 0    35   Input ~ 0
+F3
+Wire Wire Line
+	10650 7800 13100 7800
+Wire Wire Line
+	13100 7800 13100 8050
+Connection ~ 10650 7800
+Wire Wire Line
+	10650 10400 13100 10400
+Wire Wire Line
+	13100 10400 13100 9400
+Connection ~ 10650 10400
+Wire Wire Line
+	12600 8950 12600 9400
+Wire Wire Line
+	12600 9400 13100 9400
+Connection ~ 13100 9400
+Wire Wire Line
+	13100 9400 13100 9250
+Wire Wire Line
+	12250 8350 12600 8350
+Wire Wire Line
+	12250 8450 12600 8450
+Wire Wire Line
+	12250 8550 12600 8550
+Wire Wire Line
+	12250 8650 12600 8650
+Text GLabel 12250 8850 0    35   Input ~ 0
+~OE
+Wire Wire Line
+	12250 8850 12600 8850
+$Comp
+L 74xx:74LS08 U20
+U 5 1 61222156
+P 3500 13550
+F 0 "U20" H 3730 13596 50  0000 L CNN
+F 1 "74LS08" H 3730 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3500 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 3500 13550 50  0001 C CNN
+	5    3500 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U21
+U 5 1 61222AE5
+P 4250 13550
+F 0 "U21" H 4480 13596 50  0000 L CNN
+F 1 "74LS08" H 4480 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4250 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4250 13550 50  0001 C CNN
+	5    4250 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U22
+U 5 1 6124BAB2
+P 5000 13550
+F 0 "U22" H 5230 13596 50  0000 L CNN
+F 1 "74LS32" H 5230 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5000 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5000 13550 50  0001 C CNN
+	5    5000 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U24
+U 5 1 61253D89
+P 6500 13550
+F 0 "U24" H 6730 13596 50  0000 L CNN
+F 1 "74LS86" H 6730 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6500 13550 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6500 13550 50  0001 C CNN
+	5    6500 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U26
+U 7 1 6125D119
+P 8000 13550
+F 0 "U26" H 8230 13596 50  0000 L CNN
+F 1 "74LS04" H 8230 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8000 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8000 13550 50  0001 C CNN
+	7    8000 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 12900 5750 12900
+Wire Wire Line
+	8750 12900 8750 13050
+Connection ~ 5000 12900
+Wire Wire Line
+	5000 14200 5750 14200
+Wire Wire Line
+	8750 14200 8750 14050
+Connection ~ 5000 14200
+Wire Wire Line
+	5750 14050 5750 14200
+Connection ~ 5750 14200
+Wire Wire Line
+	5750 14200 6500 14200
+Wire Wire Line
+	6500 14050 6500 14200
+Connection ~ 6500 14200
+Wire Wire Line
+	6500 14200 7250 14200
+Wire Wire Line
+	7250 14050 7250 14200
+Connection ~ 7250 14200
+Wire Wire Line
+	7250 14200 8000 14200
+Wire Wire Line
+	8000 14050 8000 14200
+Connection ~ 8000 14200
+Wire Wire Line
+	8000 14200 8750 14200
+Wire Wire Line
+	5750 13050 5750 12900
+Connection ~ 5750 12900
+Wire Wire Line
+	5750 12900 6500 12900
+Wire Wire Line
+	6500 13050 6500 12900
+Connection ~ 6500 12900
+Wire Wire Line
+	6500 12900 7250 12900
+Wire Wire Line
+	7250 13050 7250 12900
+Connection ~ 7250 12900
+Wire Wire Line
+	8000 13050 8000 12900
+Wire Wire Line
+	7250 12900 8000 12900
+Connection ~ 8000 12900
+Wire Wire Line
+	8000 12900 8750 12900
+$Comp
+L Device:C C1
+U 1 1 61667CC6
+P 1200 15550
+F 0 "C1" H 1315 15596 50  0000 L CNN
+F 1 "0.1µF" H 1315 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1238 15400 50  0001 C CNN
+F 3 "~" H 1200 15550 50  0001 C CNN
+	1    1200 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 616E8286
+P 1650 15550
+F 0 "C2" H 1765 15596 50  0000 L CNN
+F 1 "0.1µF" H 1765 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1688 15400 50  0001 C CNN
+F 3 "~" H 1650 15550 50  0001 C CNN
+	1    1650 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 616E9B32
+P 2100 15550
+F 0 "C3" H 2215 15596 50  0000 L CNN
+F 1 "0.1µF" H 2215 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2138 15400 50  0001 C CNN
+F 3 "~" H 2100 15550 50  0001 C CNN
+	1    2100 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 616E9B3C
+P 2550 15550
+F 0 "C4" H 2665 15596 50  0000 L CNN
+F 1 "0.1µF" H 2665 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2588 15400 50  0001 C CNN
+F 3 "~" H 2550 15550 50  0001 C CNN
+	1    2550 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 6173F496
+P 3000 15550
+F 0 "C5" H 3115 15596 50  0000 L CNN
+F 1 "0.1µF" H 3115 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3038 15400 50  0001 C CNN
+F 3 "~" H 3000 15550 50  0001 C CNN
+	1    3000 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 6173F49C
+P 3450 15550
+F 0 "C6" H 3565 15596 50  0000 L CNN
+F 1 "0.1µF" H 3565 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3488 15400 50  0001 C CNN
+F 3 "~" H 3450 15550 50  0001 C CNN
+	1    3450 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 6173F4A2
+P 3900 15550
+F 0 "C7" H 4015 15596 50  0000 L CNN
+F 1 "0.1µF" H 4015 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3938 15400 50  0001 C CNN
+F 3 "~" H 3900 15550 50  0001 C CNN
+	1    3900 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 6173F4A8
+P 4350 15550
+F 0 "C8" H 4465 15596 50  0000 L CNN
+F 1 "0.1µF" H 4465 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4388 15400 50  0001 C CNN
+F 3 "~" H 4350 15550 50  0001 C CNN
+	1    4350 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 61790428
+P 4800 15550
+F 0 "C9" H 4915 15596 50  0000 L CNN
+F 1 "0.1µF" H 4915 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4838 15400 50  0001 C CNN
+F 3 "~" H 4800 15550 50  0001 C CNN
+	1    4800 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 6179042E
+P 5250 15550
+F 0 "C10" H 5365 15596 50  0000 L CNN
+F 1 "0.1µF" H 5365 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5288 15400 50  0001 C CNN
+F 3 "~" H 5250 15550 50  0001 C CNN
+	1    5250 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 61790434
+P 5700 15550
+F 0 "C11" H 5815 15596 50  0000 L CNN
+F 1 "0.1µF" H 5815 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5738 15400 50  0001 C CNN
+F 3 "~" H 5700 15550 50  0001 C CNN
+	1    5700 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 6179043A
+P 6150 15550
+F 0 "C12" H 6265 15596 50  0000 L CNN
+F 1 "0.1µF" H 6265 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6188 15400 50  0001 C CNN
+F 3 "~" H 6150 15550 50  0001 C CNN
+	1    6150 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 61790440
+P 6600 15550
+F 0 "C13" H 6715 15596 50  0000 L CNN
+F 1 "0.1µF" H 6715 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6638 15400 50  0001 C CNN
+F 3 "~" H 6600 15550 50  0001 C CNN
+	1    6600 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 61790446
+P 7050 15550
+F 0 "C14" H 7165 15596 50  0000 L CNN
+F 1 "0.1µF" H 7165 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7088 15400 50  0001 C CNN
+F 3 "~" H 7050 15550 50  0001 C CNN
+	1    7050 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 6179044C
+P 7500 15550
+F 0 "C15" H 7615 15596 50  0000 L CNN
+F 1 "0.1µF" H 7615 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7538 15400 50  0001 C CNN
+F 3 "~" H 7500 15550 50  0001 C CNN
+	1    7500 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 61790452
+P 7950 15550
+F 0 "C16" H 8065 15596 50  0000 L CNN
+F 1 "0.1µF" H 8065 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7988 15400 50  0001 C CNN
+F 3 "~" H 7950 15550 50  0001 C CNN
+	1    7950 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 617E5AB2
+P 8400 15550
+F 0 "C17" H 8515 15596 50  0000 L CNN
+F 1 "0.1µF" H 8515 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8438 15400 50  0001 C CNN
+F 3 "~" H 8400 15550 50  0001 C CNN
+	1    8400 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 617E5AB8
+P 8850 15550
+F 0 "C18" H 8965 15596 50  0000 L CNN
+F 1 "0.1µF" H 8965 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8888 15400 50  0001 C CNN
+F 3 "~" H 8850 15550 50  0001 C CNN
+	1    8850 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 617E5ABE
+P 9300 15550
+F 0 "C19" H 9415 15596 50  0000 L CNN
+F 1 "0.1µF" H 9415 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9338 15400 50  0001 C CNN
+F 3 "~" H 9300 15550 50  0001 C CNN
+	1    9300 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 617E5AC4
+P 9750 15550
+F 0 "C20" H 9865 15596 50  0000 L CNN
+F 1 "0.1µF" H 9865 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9788 15400 50  0001 C CNN
+F 3 "~" H 9750 15550 50  0001 C CNN
+	1    9750 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 617E5ACA
+P 10200 15550
+F 0 "C21" H 10315 15596 50  0000 L CNN
+F 1 "0.1µF" H 10315 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 10238 15400 50  0001 C CNN
+F 3 "~" H 10200 15550 50  0001 C CNN
+	1    10200 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 617E5AD0
+P 10650 15550
+F 0 "C22" H 10765 15596 50  0000 L CNN
+F 1 "0.1µF" H 10765 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 10688 15400 50  0001 C CNN
+F 3 "~" H 10650 15550 50  0001 C CNN
+	1    10650 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 617E5AD6
+P 11100 15550
+F 0 "C23" H 11215 15596 50  0000 L CNN
+F 1 "0.1µF" H 11215 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 11138 15400 50  0001 C CNN
+F 3 "~" H 11100 15550 50  0001 C CNN
+	1    11100 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C24
+U 1 1 617E5ADC
+P 11550 15550
+F 0 "C24" H 11665 15596 50  0000 L CNN
+F 1 "0.1µF" H 11665 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 11588 15400 50  0001 C CNN
+F 3 "~" H 11550 15550 50  0001 C CNN
+	1    11550 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C25
+U 1 1 617E5AE2
+P 12000 15550
+F 0 "C25" H 12115 15596 50  0000 L CNN
+F 1 "0.1µF" H 12115 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 12038 15400 50  0001 C CNN
+F 3 "~" H 12000 15550 50  0001 C CNN
+	1    12000 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 617E5AE8
+P 12450 15550
+F 0 "C26" H 12565 15596 50  0000 L CNN
+F 1 "0.1µF" H 12565 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 12488 15400 50  0001 C CNN
+F 3 "~" H 12450 15550 50  0001 C CNN
+	1    12450 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C27
+U 1 1 617E5AEE
+P 12900 15550
+F 0 "C27" H 13015 15596 50  0000 L CNN
+F 1 "0.1µF" H 13015 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 12938 15400 50  0001 C CNN
+F 3 "~" H 12900 15550 50  0001 C CNN
+	1    12900 15550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 15400 1200 15200
+Wire Wire Line
+	1200 15200 1650 15200
+Wire Wire Line
+	12900 15200 12900 15400
+Wire Wire Line
+	1200 15700 1200 15950
+Wire Wire Line
+	1200 15950 1650 15950
+Wire Wire Line
+	12900 15950 12900 15700
+Wire Wire Line
+	1650 15400 1650 15200
+Connection ~ 1650 15200
+Wire Wire Line
+	1650 15200 2100 15200
+Wire Wire Line
+	2100 15400 2100 15200
+Connection ~ 2100 15200
+Wire Wire Line
+	2100 15200 2550 15200
+Wire Wire Line
+	2550 15400 2550 15200
+Connection ~ 2550 15200
+Wire Wire Line
+	2550 15200 3000 15200
+Wire Wire Line
+	3000 15400 3000 15200
+Connection ~ 3000 15200
+Wire Wire Line
+	3000 15200 3450 15200
+Wire Wire Line
+	3450 15400 3450 15200
+Connection ~ 3450 15200
+Wire Wire Line
+	3450 15200 3900 15200
+Wire Wire Line
+	3900 15400 3900 15200
+Connection ~ 3900 15200
+Wire Wire Line
+	3900 15200 4350 15200
+Wire Wire Line
+	4350 15400 4350 15200
+Connection ~ 4350 15200
+Wire Wire Line
+	4350 15200 4800 15200
+Wire Wire Line
+	4800 15400 4800 15200
+Connection ~ 4800 15200
+Wire Wire Line
+	4800 15200 5250 15200
+Wire Wire Line
+	5250 15400 5250 15200
+Connection ~ 5250 15200
+Wire Wire Line
+	5250 15200 5700 15200
+Wire Wire Line
+	5700 15400 5700 15200
+Connection ~ 5700 15200
+Wire Wire Line
+	5700 15200 6150 15200
+Wire Wire Line
+	6150 15400 6150 15200
+Connection ~ 6150 15200
+Wire Wire Line
+	6150 15200 6600 15200
+Wire Wire Line
+	6600 15400 6600 15200
+Connection ~ 6600 15200
+Wire Wire Line
+	6600 15200 7050 15200
+Wire Wire Line
+	7050 15400 7050 15200
+Connection ~ 7050 15200
+Wire Wire Line
+	7050 15200 7500 15200
+Wire Wire Line
+	7500 15400 7500 15200
+Connection ~ 7500 15200
+Wire Wire Line
+	7500 15200 7950 15200
+Wire Wire Line
+	7950 15400 7950 15200
+Connection ~ 7950 15200
+Wire Wire Line
+	7950 15200 8400 15200
+Wire Wire Line
+	8400 15400 8400 15200
+Connection ~ 8400 15200
+Wire Wire Line
+	8400 15200 8850 15200
+Wire Wire Line
+	8850 15400 8850 15200
+Connection ~ 8850 15200
+Wire Wire Line
+	8850 15200 9300 15200
+Wire Wire Line
+	9300 15400 9300 15200
+Connection ~ 9300 15200
+Wire Wire Line
+	9300 15200 9750 15200
+Wire Wire Line
+	9750 15400 9750 15200
+Connection ~ 9750 15200
+Wire Wire Line
+	9750 15200 10200 15200
+Wire Wire Line
+	10200 15400 10200 15200
+Connection ~ 10200 15200
+Wire Wire Line
+	10200 15200 10650 15200
+Wire Wire Line
+	10650 15400 10650 15200
+Connection ~ 10650 15200
+Wire Wire Line
+	10650 15200 11100 15200
+Wire Wire Line
+	11100 15400 11100 15200
+Connection ~ 11100 15200
+Wire Wire Line
+	11100 15200 11550 15200
+Wire Wire Line
+	11550 15400 11550 15200
+Connection ~ 11550 15200
+Wire Wire Line
+	11550 15200 12000 15200
+Wire Wire Line
+	12000 15400 12000 15200
+Connection ~ 12000 15200
+Wire Wire Line
+	12000 15200 12450 15200
+Wire Wire Line
+	12450 15400 12450 15200
+Connection ~ 12450 15200
+Wire Wire Line
+	12450 15200 12900 15200
+Wire Wire Line
+	12000 15700 12000 15950
+Connection ~ 12000 15950
+Wire Wire Line
+	12000 15950 12450 15950
+Wire Wire Line
+	12450 15700 12450 15950
+Connection ~ 12450 15950
+Wire Wire Line
+	12450 15950 12900 15950
+Wire Wire Line
+	11550 15700 11550 15950
+Connection ~ 11550 15950
+Wire Wire Line
+	11550 15950 12000 15950
+Wire Wire Line
+	11100 15700 11100 15950
+Connection ~ 11100 15950
+Wire Wire Line
+	11100 15950 11550 15950
+Wire Wire Line
+	10650 15700 10650 15950
+Connection ~ 10650 15950
+Wire Wire Line
+	10650 15950 11100 15950
+Wire Wire Line
+	10200 15700 10200 15950
+Connection ~ 10200 15950
+Wire Wire Line
+	10200 15950 10650 15950
+Wire Wire Line
+	9750 15700 9750 15950
+Connection ~ 9750 15950
+Wire Wire Line
+	9750 15950 10200 15950
+Wire Wire Line
+	9300 15700 9300 15950
+Connection ~ 9300 15950
+Wire Wire Line
+	9300 15950 9750 15950
+Wire Wire Line
+	8850 15700 8850 15950
+Connection ~ 8850 15950
+Wire Wire Line
+	8850 15950 9300 15950
+Wire Wire Line
+	8400 15700 8400 15950
+Connection ~ 8400 15950
+Wire Wire Line
+	8400 15950 8850 15950
+Wire Wire Line
+	7950 15700 7950 15950
+Connection ~ 7950 15950
+Wire Wire Line
+	7950 15950 8400 15950
+Wire Wire Line
+	7500 15700 7500 15950
+Connection ~ 7500 15950
+Wire Wire Line
+	7500 15950 7950 15950
+Wire Wire Line
+	7050 15700 7050 15950
+Connection ~ 7050 15950
+Wire Wire Line
+	7050 15950 7500 15950
+Wire Wire Line
+	6600 15700 6600 15950
+Connection ~ 6600 15950
+Wire Wire Line
+	6600 15950 7050 15950
+Wire Wire Line
+	6150 15700 6150 15950
+Connection ~ 6150 15950
+Wire Wire Line
+	6150 15950 6600 15950
+Wire Wire Line
+	5700 15700 5700 15950
+Connection ~ 5700 15950
+Wire Wire Line
+	5700 15950 6150 15950
+Wire Wire Line
+	5250 15700 5250 15950
+Connection ~ 5250 15950
+Wire Wire Line
+	5250 15950 5700 15950
+Wire Wire Line
+	4800 15700 4800 15950
+Connection ~ 4800 15950
+Wire Wire Line
+	4800 15950 5250 15950
+Wire Wire Line
+	4350 15700 4350 15950
+Connection ~ 4350 15950
+Wire Wire Line
+	4350 15950 4800 15950
+Wire Wire Line
+	3900 15700 3900 15950
+Connection ~ 3900 15950
+Wire Wire Line
+	3900 15950 4350 15950
+Wire Wire Line
+	3450 15700 3450 15950
+Connection ~ 3450 15950
+Wire Wire Line
+	3450 15950 3900 15950
+Wire Wire Line
+	3000 15700 3000 15950
+Connection ~ 3000 15950
+Wire Wire Line
+	3000 15950 3450 15950
+Wire Wire Line
+	2550 15700 2550 15950
+Connection ~ 2550 15950
+Wire Wire Line
+	2550 15950 3000 15950
+Wire Wire Line
+	2100 15700 2100 15950
+Connection ~ 2100 15950
+Wire Wire Line
+	2100 15950 2550 15950
+Wire Wire Line
+	1650 15700 1650 15950
+Connection ~ 1650 15950
+Wire Wire Line
+	1650 15950 2100 15950
+$Comp
+L power:VCC #PWR0111
+U 1 1 62EE64F2
+P 6600 14950
+F 0 "#PWR0111" H 6600 14800 50  0001 C CNN
+F 1 "VCC" H 6617 15123 50  0000 C CNN
+F 2 "" H 6600 14950 50  0001 C CNN
+F 3 "" H 6600 14950 50  0001 C CNN
+	1    6600 14950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 62EE720A
+P 6600 16150
+F 0 "#PWR0112" H 6600 15900 50  0001 C CNN
+F 1 "GND" H 6605 15977 50  0000 C CNN
+F 2 "" H 6600 16150 50  0001 C CNN
+F 3 "" H 6600 16150 50  0001 C CNN
+	1    6600 16150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 14950 6600 15200
+Wire Wire Line
+	6600 15950 6600 16150
+$Comp
+L Connector_Generic:Conn_01x38 J1
+U 1 1 630C0577
+P 19300 5900
+F 0 "J1" V 19425 5846 50  0000 C CNN
+F 1 "Conn_01x38" V 19516 5846 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x38_P2.54mm_Vertical" H 19300 5900 50  0001 C CNN
+F 3 "~" H 19300 5900 50  0001 C CNN
+	1    19300 5900
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	19100 5700 19100 3850
+Connection ~ 19100 3850
+Wire Wire Line
+	19100 3850 19200 3850
+Wire Wire Line
+	19200 1250 20500 1250
+Wire Wire Line
+	20500 1250 20500 4100
+Wire Wire Line
+	20500 4100 19200 4100
+Wire Wire Line
+	19200 4100 19200 5700
+Connection ~ 19200 1250
+Text GLabel 20100 5500 1    35   BiDi ~ 0
+D0
+Text GLabel 20200 5500 1    35   BiDi ~ 0
+D1
+Text GLabel 20300 5500 1    35   BiDi ~ 0
+D2
+Text GLabel 20400 5500 1    35   BiDi ~ 0
+D3
+Wire Wire Line
+	20100 5500 20100 5700
+Wire Wire Line
+	20200 5500 20200 5700
+Wire Wire Line
+	20300 5500 20300 5700
+Wire Wire Line
+	20400 5500 20400 5700
+Text GLabel 19400 5500 1    35   Output ~ 0
+~RST
+Text GLabel 19500 5500 1    35   Output ~ 0
+CLK
+Wire Wire Line
+	19400 5500 19400 5700
+Wire Wire Line
+	19500 5500 19500 5700
+Text GLabel 17800 5500 1    35   Output ~ 0
+OP0
+Text GLabel 17700 5500 1    35   Output ~ 0
+OP1
+Text GLabel 17600 5500 1    35   Output ~ 0
+OP2
+Text GLabel 17500 5500 1    35   Output ~ 0
+OP3
+Text GLabel 17900 5500 1    35   Output ~ 0
+~ALUEN
+Text GLabel 18000 5500 1    35   Output ~ 0
+~LDA
+Text GLabel 18100 5500 1    35   Output ~ 0
+~LDB
+Text GLabel 18200 5500 1    35   Output ~ 0
+~LDF
+Text GLabel 18400 5500 1    35   Output ~ 0
+~OE
+Text GLabel 18500 5500 1    35   Input ~ 0
+CF
+Text GLabel 18600 5500 1    35   Input ~ 0
+OF
+Text GLabel 18700 5500 1    35   Input ~ 0
+ZF
+Text GLabel 18800 5500 1    35   Input ~ 0
+EF
+Text GLabel 18900 5500 1    35   Input ~ 0
+LF
+Text GLabel 19000 5500 1    35   Input ~ 0
+GF
+Wire Wire Line
+	17500 5500 17500 5700
+Wire Wire Line
+	17600 5500 17600 5700
+Wire Wire Line
+	17700 5500 17700 5700
+Wire Wire Line
+	17800 5500 17800 5700
+Wire Wire Line
+	17900 5500 17900 5700
+Wire Wire Line
+	18000 5500 18000 5700
+Wire Wire Line
+	18100 5500 18100 5700
+Wire Wire Line
+	18200 5500 18200 5700
+Wire Wire Line
+	18400 5500 18400 5700
+Wire Wire Line
+	18500 5500 18500 5700
+Wire Wire Line
+	18600 5500 18600 5700
+Wire Wire Line
+	18700 5500 18700 5700
+Wire Wire Line
+	18800 5500 18800 5700
+Wire Wire Line
+	18900 5500 18900 5700
+Wire Wire Line
+	19000 5500 19000 5700
+NoConn ~ 19300 5700
+NoConn ~ 19700 5700
+NoConn ~ 19600 5700
+NoConn ~ 19800 5700
+NoConn ~ 19900 5700
+NoConn ~ 20000 5700
+NoConn ~ 20500 5700
+NoConn ~ 20600 5700
+NoConn ~ 20700 5700
+NoConn ~ 20800 5700
+NoConn ~ 20900 5700
+NoConn ~ 21000 5700
+NoConn ~ 21100 5700
+NoConn ~ 21200 5700
+Text GLabel 18300 5500 1    35   Output ~ 0
+~CLF
+Wire Wire Line
+	18300 5500 18300 5700
+NoConn ~ 2350 3050
+$Comp
+L 74xx:74LS04 U27
+U 2 1 64AD899F
+P 14350 3650
+F 0 "U27" H 14350 3967 50  0000 C CNN
+F 1 "74LS04" H 14350 3876 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 14350 3650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14350 3650 50  0001 C CNN
+	2    14350 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 13350 3650 0    35   Input ~ 0
+~RST
+$Comp
+L 74xx:74LS32 U28
+U 1 1 64ADB29B
+P 15250 3350
+F 0 "U28" H 15250 3675 50  0000 C CNN
+F 1 "74LS32" H 15250 3584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 15250 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 15250 3350 50  0001 C CNN
+	1    15250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13400 2700 14050 2700
+Wire Wire Line
+	14050 2700 14050 3000
+Wire Wire Line
+	13350 3200 13450 3200
+Wire Wire Line
+	14650 3100 14850 3100
+Wire Wire Line
+	14850 3100 14850 3250
+Wire Wire Line
+	14850 3250 14950 3250
+Wire Wire Line
+	14650 3650 14850 3650
+Wire Wire Line
+	14850 3650 14850 3450
+Wire Wire Line
+	14850 3450 14950 3450
+Wire Wire Line
+	15550 3350 15700 3350
+Connection ~ 15700 3350
+Wire Wire Line
+	15700 3350 15700 3500
+Wire Wire Line
+	13350 3650 14050 3650
+$Comp
+L 74xx:74LS32 U28
+U 5 1 64E1CA0A
+P 9500 13550
+F 0 "U28" H 9730 13596 50  0000 L CNN
+F 1 "74LS32" H 9730 13505 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9500 13550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9500 13550 50  0001 C CNN
+	5    9500 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 12900 9500 12900
+Wire Wire Line
+	9500 12900 9500 13050
+Connection ~ 8750 12900
+Wire Wire Line
+	8750 14200 9500 14200
+Wire Wire Line
+	9500 14200 9500 14050
+Connection ~ 8750 14200
+$Comp
+L Device:C C28
+U 1 1 64F1135A
+P 13350 15550
+F 0 "C28" H 13465 15596 50  0000 L CNN
+F 1 "0.1µF" H 13465 15505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 13388 15400 50  0001 C CNN
+F 3 "~" H 13350 15550 50  0001 C CNN
+	1    13350 15550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12900 15200 13350 15200
+Wire Wire Line
+	13350 15200 13350 15400
+Connection ~ 12900 15200
+Wire Wire Line
+	12900 15950 13350 15950
+Wire Wire Line
+	13350 15950 13350 15700
+Connection ~ 12900 15950
+$Comp
+L Device:LED D1
+U 1 1 6504223C
+P 14900 11700
+F 0 "D1" V 15000 11700 50  0000 R CNN
+F 1 "LED" V 14848 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 14900 11700 50  0001 C CNN
+F 3 "~" H 14900 11700 50  0001 C CNN
+	1    14900 11700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 15350 11450 1    35   Input ~ 0
+A0
+Text GLabel 15200 11450 1    35   Input ~ 0
+A1
+Text GLabel 15050 11450 1    35   Input ~ 0
+A2
+Text GLabel 14900 11450 1    35   Input ~ 0
+A3
+Wire Wire Line
+	14900 11450 14900 11550
+$Comp
+L power:GND #PWR0113
+U 1 1 6573409B
+P 15250 12550
+F 0 "#PWR0113" H 15250 12300 50  0001 C CNN
+F 1 "GND" H 15255 12377 50  0000 C CNN
+F 2 "" H 15250 12550 50  0001 C CNN
+F 3 "" H 15250 12550 50  0001 C CNN
+	1    15250 12550
+	1    0    0    -1  
+$EndComp
+Text GLabel 16250 11450 1    35   Input ~ 0
+B0
+Text GLabel 16100 11450 1    35   Input ~ 0
+B1
+Text GLabel 15950 11450 1    35   Input ~ 0
+B2
+Text GLabel 15800 11450 1    35   Input ~ 0
+B3
+$Comp
+L power:GND #PWR0114
+U 1 1 657B302B
+P 16150 12550
+F 0 "#PWR0114" H 16150 12300 50  0001 C CNN
+F 1 "GND" H 16155 12377 50  0000 C CNN
+F 2 "" H 16150 12550 50  0001 C CNN
+F 3 "" H 16150 12550 50  0001 C CNN
+	1    16150 12550
+	1    0    0    -1  
+$EndComp
+Text GLabel 17100 11050 1    35   Input ~ 0
+F0
+Text GLabel 16950 11050 1    35   Input ~ 0
+F1
+Text GLabel 16800 11050 1    35   Input ~ 0
+F2
+Text GLabel 16650 11050 1    35   Input ~ 0
+F3
+$Comp
+L power:GND #PWR0115
+U 1 1 65834D07
+P 17000 12550
+F 0 "#PWR0115" H 17000 12300 50  0001 C CNN
+F 1 "GND" H 17005 12377 50  0000 C CNN
+F 2 "" H 17000 12550 50  0001 C CNN
+F 3 "" H 17000 12550 50  0001 C CNN
+	1    17000 12550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN1
+U 1 1 658B945B
+P 15050 12250
+F 0 "RN1" H 14770 12204 50  0000 R CNN
+F 1 "470Ω" H 14770 12295 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 15325 12250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 15050 12250 50  0001 C CNN
+	1    15050 12250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 65936E13
+P 15050 11700
+F 0 "D3" V 15150 11700 50  0000 R CNN
+F 1 "LED" V 14998 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15050 11700 50  0001 C CNN
+F 3 "~" H 15050 11700 50  0001 C CNN
+	1    15050 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 659370FC
+P 15200 11700
+F 0 "D5" V 15300 11700 50  0000 R CNN
+F 1 "LED" V 15148 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15200 11700 50  0001 C CNN
+F 3 "~" H 15200 11700 50  0001 C CNN
+	1    15200 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 659372F4
+P 15350 11700
+F 0 "D7" V 15450 11700 50  0000 R CNN
+F 1 "LED" V 15298 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15350 11700 50  0001 C CNN
+F 3 "~" H 15350 11700 50  0001 C CNN
+	1    15350 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15050 11450 15050 11550
+Wire Wire Line
+	15200 11450 15200 11550
+Wire Wire Line
+	15250 12450 15250 12550
+Wire Wire Line
+	15350 11450 15350 11550
+Wire Wire Line
+	14900 11850 14900 11950
+Wire Wire Line
+	14900 11950 14950 11950
+Wire Wire Line
+	14950 11950 14950 12050
+Wire Wire Line
+	15050 11850 15050 12050
+Wire Wire Line
+	15200 11850 15200 11950
+Wire Wire Line
+	15200 11950 15150 11950
+Wire Wire Line
+	15150 11950 15150 12050
+Wire Wire Line
+	15350 11850 15350 11950
+Wire Wire Line
+	15350 11950 15250 11950
+Wire Wire Line
+	15250 11950 15250 12050
+$Comp
+L Device:LED D9
+U 1 1 65FFCE43
+P 15800 11700
+F 0 "D9" V 15900 11700 50  0000 R CNN
+F 1 "LED" V 15748 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15800 11700 50  0001 C CNN
+F 3 "~" H 15800 11700 50  0001 C CNN
+	1    15800 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15800 11450 15800 11550
+$Comp
+L Device:R_Network04_US RN3
+U 1 1 65FFCE4A
+P 15950 12250
+F 0 "RN3" H 15670 12204 50  0000 R CNN
+F 1 "470Ω" H 15670 12295 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 16225 12250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 15950 12250 50  0001 C CNN
+	1    15950 12250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D11
+U 1 1 65FFCE50
+P 15950 11700
+F 0 "D11" V 16050 11700 50  0000 R CNN
+F 1 "LED" V 15898 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15950 11700 50  0001 C CNN
+F 3 "~" H 15950 11700 50  0001 C CNN
+	1    15950 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D13
+U 1 1 65FFCE56
+P 16100 11700
+F 0 "D13" V 16200 11700 50  0000 R CNN
+F 1 "LED" V 16048 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16100 11700 50  0001 C CNN
+F 3 "~" H 16100 11700 50  0001 C CNN
+	1    16100 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D15
+U 1 1 65FFCE5C
+P 16250 11700
+F 0 "D15" V 16350 11700 50  0000 R CNN
+F 1 "LED" V 16198 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16250 11700 50  0001 C CNN
+F 3 "~" H 16250 11700 50  0001 C CNN
+	1    16250 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15950 11450 15950 11550
+Wire Wire Line
+	16100 11450 16100 11550
+Wire Wire Line
+	16150 12450 16150 12550
+Wire Wire Line
+	16250 11450 16250 11550
+Wire Wire Line
+	15800 11850 15800 11950
+Wire Wire Line
+	15800 11950 15850 11950
+Wire Wire Line
+	15850 11950 15850 12050
+Wire Wire Line
+	15950 11850 15950 12050
+Wire Wire Line
+	16100 11850 16100 11950
+Wire Wire Line
+	16100 11950 16050 11950
+Wire Wire Line
+	16050 11950 16050 12050
+Wire Wire Line
+	16250 11850 16250 11950
+Wire Wire Line
+	16250 11950 16150 11950
+Wire Wire Line
+	16150 11950 16150 12050
+$Comp
+L Device:LED D17
+U 1 1 6607D3DA
+P 16650 11700
+F 0 "D17" V 16750 11700 50  0000 R CNN
+F 1 "LED" V 16598 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16650 11700 50  0001 C CNN
+F 3 "~" H 16650 11700 50  0001 C CNN
+	1    16650 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Network04_US RN5
+U 1 1 6607D3E1
+P 16800 12250
+F 0 "RN5" H 16520 12204 50  0000 R CNN
+F 1 "470Ω" H 16520 12295 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 17075 12250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 16800 12250 50  0001 C CNN
+	1    16800 12250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D19
+U 1 1 6607D3E7
+P 16800 11700
+F 0 "D19" V 16900 11700 50  0000 R CNN
+F 1 "LED" V 16748 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16800 11700 50  0001 C CNN
+F 3 "~" H 16800 11700 50  0001 C CNN
+	1    16800 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D21
+U 1 1 6607D3ED
+P 16950 11700
+F 0 "D21" V 17050 11700 50  0000 R CNN
+F 1 "LED" V 16898 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16950 11700 50  0001 C CNN
+F 3 "~" H 16950 11700 50  0001 C CNN
+	1    16950 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D23
+U 1 1 6607D3F3
+P 17100 11700
+F 0 "D23" V 17200 11700 50  0000 R CNN
+F 1 "LED" V 17048 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17100 11700 50  0001 C CNN
+F 3 "~" H 17100 11700 50  0001 C CNN
+	1    17100 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	17000 12450 17000 12550
+Wire Wire Line
+	16650 11850 16650 11950
+Wire Wire Line
+	16650 11950 16700 11950
+Wire Wire Line
+	16700 11950 16700 12050
+Wire Wire Line
+	16800 11850 16800 12050
+Wire Wire Line
+	16950 11850 16950 11950
+Wire Wire Line
+	16950 11950 16900 11950
+Wire Wire Line
+	16900 11950 16900 12050
+Wire Wire Line
+	17100 11850 17100 11950
+Wire Wire Line
+	17100 11950 17000 11950
+Wire Wire Line
+	17000 11950 17000 12050
+$Comp
+L Device:R_Network04_US RN7
+U 1 1 66436090
+P 17500 12250
+F 0 "RN7" H 17220 12204 50  0000 R CNN
+F 1 "10kΩ" H 17220 12295 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 17775 12250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 17500 12250 50  0001 C CNN
+	1    17500 12250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	16650 11500 17400 11500
+Wire Wire Line
+	17400 11500 17400 12050
+Connection ~ 16650 11500
+Wire Wire Line
+	16650 11500 16650 11550
+Wire Wire Line
+	16800 11400 17500 11400
+Wire Wire Line
+	17500 11400 17500 12050
+Connection ~ 16800 11400
+Wire Wire Line
+	16800 11400 16800 11550
+Wire Wire Line
+	16950 11300 17600 11300
+Wire Wire Line
+	17600 11300 17600 12050
+Connection ~ 16950 11300
+Wire Wire Line
+	16950 11300 16950 11550
+Wire Wire Line
+	16650 11050 16650 11500
+Wire Wire Line
+	16800 11050 16800 11400
+Wire Wire Line
+	16950 11050 16950 11300
+Wire Wire Line
+	17100 11050 17100 11200
+Wire Wire Line
+	17100 11200 17700 11200
+Wire Wire Line
+	17700 11200 17700 12050
+Connection ~ 17100 11200
+Wire Wire Line
+	17100 11200 17100 11550
+$Comp
+L power:GND #PWR0116
+U 1 1 6686D3D6
+P 17700 12550
+F 0 "#PWR0116" H 17700 12300 50  0001 C CNN
+F 1 "GND" H 17705 12377 50  0000 C CNN
+F 2 "" H 17700 12550 50  0001 C CNN
+F 3 "" H 17700 12550 50  0001 C CNN
+	1    17700 12550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17700 12450 17700 12550
+$Comp
+L Device:LED D29
+U 1 1 66901B5D
+P 18350 11700
+F 0 "D29" V 18450 11700 50  0000 R CNN
+F 1 "LED" V 18298 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18350 11700 50  0001 C CNN
+F 3 "~" H 18350 11700 50  0001 C CNN
+	1    18350 11700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 18500 11450 1    35   Input ~ 0
+OF
+Text GLabel 18350 11450 1    35   Input ~ 0
+CF
+Wire Wire Line
+	18350 11450 18350 11550
+$Comp
+L power:GND #PWR0117
+U 1 1 66901B68
+P 18350 12550
+F 0 "#PWR0117" H 18350 12300 50  0001 C CNN
+F 1 "GND" H 18355 12377 50  0000 C CNN
+F 2 "" H 18350 12550 50  0001 C CNN
+F 3 "" H 18350 12550 50  0001 C CNN
+	1    18350 12550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D31
+U 1 1 66901B74
+P 18500 11700
+F 0 "D31" V 18600 11700 50  0000 R CNN
+F 1 "LED" V 18448 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18500 11700 50  0001 C CNN
+F 3 "~" H 18500 11700 50  0001 C CNN
+	1    18500 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18500 11450 18500 11550
+$Comp
+L Device:LED D34
+U 1 1 66994098
+P 18800 11700
+F 0 "D34" V 18900 11700 50  0000 R CNN
+F 1 "LED" V 18748 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18800 11700 50  0001 C CNN
+F 3 "~" H 18800 11700 50  0001 C CNN
+	1    18800 11700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 19250 11450 1    35   Input ~ 0
+GF
+Text GLabel 19100 11450 1    35   Input ~ 0
+LF
+Text GLabel 18950 11450 1    35   Input ~ 0
+EF
+Text GLabel 18800 11450 1    35   Input ~ 0
+ZF
+Wire Wire Line
+	18800 11450 18800 11550
+$Comp
+L power:GND #PWR0118
+U 1 1 669940A3
+P 19150 12550
+F 0 "#PWR0118" H 19150 12300 50  0001 C CNN
+F 1 "GND" H 19155 12377 50  0000 C CNN
+F 2 "" H 19150 12550 50  0001 C CNN
+F 3 "" H 19150 12550 50  0001 C CNN
+	1    19150 12550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN10
+U 1 1 669940A9
+P 18950 12250
+F 0 "RN10" H 18670 12204 50  0000 R CNN
+F 1 "470Ω" H 18670 12295 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 19225 12250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 18950 12250 50  0001 C CNN
+	1    18950 12250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D36
+U 1 1 669940AF
+P 18950 11700
+F 0 "D36" V 19050 11700 50  0000 R CNN
+F 1 "LED" V 18898 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18950 11700 50  0001 C CNN
+F 3 "~" H 18950 11700 50  0001 C CNN
+	1    18950 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D37
+U 1 1 669940B5
+P 19100 11700
+F 0 "D37" V 19200 11700 50  0000 R CNN
+F 1 "LED" V 19048 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19100 11700 50  0001 C CNN
+F 3 "~" H 19100 11700 50  0001 C CNN
+	1    19100 11700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D39
+U 1 1 669940BB
+P 19250 11700
+F 0 "D39" V 19350 11700 50  0000 R CNN
+F 1 "LED" V 19198 11583 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19250 11700 50  0001 C CNN
+F 3 "~" H 19250 11700 50  0001 C CNN
+	1    19250 11700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18950 11450 18950 11550
+Wire Wire Line
+	19100 11450 19100 11550
+Wire Wire Line
+	19150 12450 19150 12550
+Wire Wire Line
+	19250 11450 19250 11550
+Wire Wire Line
+	18800 11850 18800 11950
+Wire Wire Line
+	18800 11950 18850 11950
+Wire Wire Line
+	18850 11950 18850 12050
+Wire Wire Line
+	18950 11850 18950 12050
+Wire Wire Line
+	19100 11850 19100 11950
+Wire Wire Line
+	19100 11950 19050 11950
+Wire Wire Line
+	19050 11950 19050 12050
+Wire Wire Line
+	19250 11850 19250 11950
+Wire Wire Line
+	19250 11950 19150 11950
+Wire Wire Line
+	19150 11950 19150 12050
+$Comp
+L Device:R R1
+U 1 1 66B3F649
+P 18350 12200
+F 0 "R1" H 18200 12250 50  0000 L CNN
+F 1 "470Ω" H 18100 12150 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 18280 12200 50  0001 C CNN
+F 3 "~" H 18350 12200 50  0001 C CNN
+	1    18350 12200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 66B3FD9E
+P 18500 12200
+F 0 "R2" H 18570 12246 50  0000 L CNN
+F 1 "470Ω" H 18570 12155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 18430 12200 50  0001 C CNN
+F 3 "~" H 18500 12200 50  0001 C CNN
+	1    18500 12200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18350 11850 18350 12050
+Wire Wire Line
+	18500 11850 18500 12050
+Wire Wire Line
+	18350 12350 18350 12500
+Wire Wire Line
+	18500 12350 18500 12500
+Wire Wire Line
+	18500 12500 18350 12500
+Connection ~ 18350 12500
+Wire Wire Line
+	18350 12500 18350 12550
+$Comp
+L Device:LED D2
+U 1 1 66EE0FF6
+P 14900 13300
+F 0 "D2" V 15000 13300 50  0000 R CNN
+F 1 "LED" V 14848 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 14900 13300 50  0001 C CNN
+F 3 "~" H 14900 13300 50  0001 C CNN
+	1    14900 13300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 15350 13050 1    35   Input ~ 0
+S0
+Text GLabel 15200 13050 1    35   Input ~ 0
+S1
+Text GLabel 15050 13050 1    35   Input ~ 0
+S2
+Text GLabel 14900 13050 1    35   Input ~ 0
+S3
+Wire Wire Line
+	14900 13050 14900 13150
+$Comp
+L power:GND #PWR0119
+U 1 1 66EE1001
+P 15250 14150
+F 0 "#PWR0119" H 15250 13900 50  0001 C CNN
+F 1 "GND" H 15255 13977 50  0000 C CNN
+F 2 "" H 15250 14150 50  0001 C CNN
+F 3 "" H 15250 14150 50  0001 C CNN
+	1    15250 14150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN2
+U 1 1 66EE1007
+P 15050 13850
+F 0 "RN2" H 14770 13804 50  0000 R CNN
+F 1 "470Ω" H 14770 13895 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 15325 13850 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 15050 13850 50  0001 C CNN
+	1    15050 13850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 66EE100D
+P 15050 13300
+F 0 "D4" V 15150 13300 50  0000 R CNN
+F 1 "LED" V 14998 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15050 13300 50  0001 C CNN
+F 3 "~" H 15050 13300 50  0001 C CNN
+	1    15050 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 66EE1013
+P 15200 13300
+F 0 "D6" V 15300 13300 50  0000 R CNN
+F 1 "LED" V 15148 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15200 13300 50  0001 C CNN
+F 3 "~" H 15200 13300 50  0001 C CNN
+	1    15200 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 66EE1019
+P 15350 13300
+F 0 "D8" V 15450 13300 50  0000 R CNN
+F 1 "LED" V 15298 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15350 13300 50  0001 C CNN
+F 3 "~" H 15350 13300 50  0001 C CNN
+	1    15350 13300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15050 13050 15050 13150
+Wire Wire Line
+	15200 13050 15200 13150
+Wire Wire Line
+	15250 14050 15250 14150
+Wire Wire Line
+	15350 13050 15350 13150
+Wire Wire Line
+	14900 13450 14900 13550
+Wire Wire Line
+	14900 13550 14950 13550
+Wire Wire Line
+	14950 13550 14950 13650
+Wire Wire Line
+	15050 13450 15050 13650
+Wire Wire Line
+	15200 13450 15200 13550
+Wire Wire Line
+	15200 13550 15150 13550
+Wire Wire Line
+	15150 13550 15150 13650
+Wire Wire Line
+	15350 13450 15350 13550
+Wire Wire Line
+	15350 13550 15250 13550
+Wire Wire Line
+	15250 13550 15250 13650
+$Comp
+L Device:LED D10
+U 1 1 66F805D3
+P 15800 13300
+F 0 "D10" V 15900 13300 50  0000 R CNN
+F 1 "LED" V 15748 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15800 13300 50  0001 C CNN
+F 3 "~" H 15800 13300 50  0001 C CNN
+	1    15800 13300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 16250 13050 1    35   Input ~ 0
+-A0
+Text GLabel 16100 13050 1    35   Input ~ 0
+-A1
+Text GLabel 15950 13050 1    35   Input ~ 0
+-A2
+Text GLabel 15800 13050 1    35   Input ~ 0
+-A3
+Wire Wire Line
+	15800 13050 15800 13150
+$Comp
+L power:GND #PWR0120
+U 1 1 66F805DE
+P 16150 14150
+F 0 "#PWR0120" H 16150 13900 50  0001 C CNN
+F 1 "GND" H 16155 13977 50  0000 C CNN
+F 2 "" H 16150 14150 50  0001 C CNN
+F 3 "" H 16150 14150 50  0001 C CNN
+	1    16150 14150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN4
+U 1 1 66F805E4
+P 15950 13850
+F 0 "RN4" H 15670 13804 50  0000 R CNN
+F 1 "470Ω" H 15670 13895 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 16225 13850 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 15950 13850 50  0001 C CNN
+	1    15950 13850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D12
+U 1 1 66F805EA
+P 15950 13300
+F 0 "D12" V 16050 13300 50  0000 R CNN
+F 1 "LED" V 15898 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15950 13300 50  0001 C CNN
+F 3 "~" H 15950 13300 50  0001 C CNN
+	1    15950 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 66F805F0
+P 16100 13300
+F 0 "D14" V 16200 13300 50  0000 R CNN
+F 1 "LED" V 16048 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16100 13300 50  0001 C CNN
+F 3 "~" H 16100 13300 50  0001 C CNN
+	1    16100 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D16
+U 1 1 66F805F6
+P 16250 13300
+F 0 "D16" V 16350 13300 50  0000 R CNN
+F 1 "LED" V 16198 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16250 13300 50  0001 C CNN
+F 3 "~" H 16250 13300 50  0001 C CNN
+	1    16250 13300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15950 13050 15950 13150
+Wire Wire Line
+	16100 13050 16100 13150
+Wire Wire Line
+	16150 14050 16150 14150
+Wire Wire Line
+	16250 13050 16250 13150
+Wire Wire Line
+	15800 13450 15800 13550
+Wire Wire Line
+	15800 13550 15850 13550
+Wire Wire Line
+	15850 13550 15850 13650
+Wire Wire Line
+	15950 13450 15950 13650
+Wire Wire Line
+	16100 13450 16100 13550
+Wire Wire Line
+	16100 13550 16050 13550
+Wire Wire Line
+	16050 13550 16050 13650
+Wire Wire Line
+	16250 13450 16250 13550
+Wire Wire Line
+	16250 13550 16150 13550
+Wire Wire Line
+	16150 13550 16150 13650
+$Comp
+L Device:LED D18
+U 1 1 6701FEFD
+P 16650 13300
+F 0 "D18" V 16750 13300 50  0000 R CNN
+F 1 "LED" V 16598 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16650 13300 50  0001 C CNN
+F 3 "~" H 16650 13300 50  0001 C CNN
+	1    16650 13300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 17100 13050 1    35   Input ~ 0
+~A0
+Text GLabel 16950 13050 1    35   Input ~ 0
+~A1
+Text GLabel 16800 13050 1    35   Input ~ 0
+~A2
+Text GLabel 16650 13050 1    35   Input ~ 0
+~A3
+Wire Wire Line
+	16650 13050 16650 13150
+$Comp
+L power:GND #PWR0121
+U 1 1 6701FF08
+P 17000 14150
+F 0 "#PWR0121" H 17000 13900 50  0001 C CNN
+F 1 "GND" H 17005 13977 50  0000 C CNN
+F 2 "" H 17000 14150 50  0001 C CNN
+F 3 "" H 17000 14150 50  0001 C CNN
+	1    17000 14150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN6
+U 1 1 6701FF0E
+P 16800 13850
+F 0 "RN6" H 16520 13804 50  0000 R CNN
+F 1 "470Ω" H 16520 13895 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 17075 13850 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 16800 13850 50  0001 C CNN
+	1    16800 13850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D20
+U 1 1 6701FF14
+P 16800 13300
+F 0 "D20" V 16900 13300 50  0000 R CNN
+F 1 "LED" V 16748 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16800 13300 50  0001 C CNN
+F 3 "~" H 16800 13300 50  0001 C CNN
+	1    16800 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D22
+U 1 1 6701FF1A
+P 16950 13300
+F 0 "D22" V 17050 13300 50  0000 R CNN
+F 1 "LED" V 16898 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16950 13300 50  0001 C CNN
+F 3 "~" H 16950 13300 50  0001 C CNN
+	1    16950 13300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D24
+U 1 1 6701FF20
+P 17100 13300
+F 0 "D24" V 17200 13300 50  0000 R CNN
+F 1 "LED" V 17048 13183 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17100 13300 50  0001 C CNN
+F 3 "~" H 17100 13300 50  0001 C CNN
+	1    17100 13300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	16800 13050 16800 13150
+Wire Wire Line
+	16950 13050 16950 13150
+Wire Wire Line
+	17000 14050 17000 14150
+Wire Wire Line
+	17100 13050 17100 13150
+Wire Wire Line
+	16650 13450 16650 13550
+Wire Wire Line
+	16650 13550 16700 13550
+Wire Wire Line
+	16700 13550 16700 13650
+Wire Wire Line
+	16800 13450 16800 13650
+Wire Wire Line
+	16950 13450 16950 13550
+Wire Wire Line
+	16950 13550 16900 13550
+Wire Wire Line
+	16900 13550 16900 13650
+Wire Wire Line
+	17100 13450 17100 13550
+Wire Wire Line
+	17100 13550 17000 13550
+Wire Wire Line
+	17000 13550 17000 13650
+$Comp
+L Device:LED D25
+U 1 1 670BD993
+P 17500 13350
+F 0 "D25" V 17600 13350 50  0000 R CNN
+F 1 "LED" V 17448 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17500 13350 50  0001 C CNN
+F 3 "~" H 17500 13350 50  0001 C CNN
+	1    17500 13350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 17950 13100 1    35   Input ~ 0
+AORB0
+Text GLabel 17800 13100 1    35   Input ~ 0
+AORB1
+Text GLabel 17650 13100 1    35   Input ~ 0
+AORB2
+Text GLabel 17500 13100 1    35   Input ~ 0
+AORB3
+Wire Wire Line
+	17500 13100 17500 13200
+$Comp
+L power:GND #PWR0122
+U 1 1 670BD99E
+P 17850 14200
+F 0 "#PWR0122" H 17850 13950 50  0001 C CNN
+F 1 "GND" H 17855 14027 50  0000 C CNN
+F 2 "" H 17850 14200 50  0001 C CNN
+F 3 "" H 17850 14200 50  0001 C CNN
+	1    17850 14200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN8
+U 1 1 670BD9A4
+P 17650 13900
+F 0 "RN8" H 17370 13854 50  0000 R CNN
+F 1 "470Ω" H 17370 13945 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 17925 13900 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 17650 13900 50  0001 C CNN
+	1    17650 13900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D26
+U 1 1 670BD9AA
+P 17650 13350
+F 0 "D26" V 17750 13350 50  0000 R CNN
+F 1 "LED" V 17598 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17650 13350 50  0001 C CNN
+F 3 "~" H 17650 13350 50  0001 C CNN
+	1    17650 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D27
+U 1 1 670BD9B0
+P 17800 13350
+F 0 "D27" V 17900 13350 50  0000 R CNN
+F 1 "LED" V 17748 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17800 13350 50  0001 C CNN
+F 3 "~" H 17800 13350 50  0001 C CNN
+	1    17800 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D28
+U 1 1 670BD9B6
+P 17950 13350
+F 0 "D28" V 18050 13350 50  0000 R CNN
+F 1 "LED" V 17898 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17950 13350 50  0001 C CNN
+F 3 "~" H 17950 13350 50  0001 C CNN
+	1    17950 13350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	17650 13100 17650 13200
+Wire Wire Line
+	17800 13100 17800 13200
+Wire Wire Line
+	17850 14100 17850 14200
+Wire Wire Line
+	17950 13100 17950 13200
+Wire Wire Line
+	17500 13500 17500 13600
+Wire Wire Line
+	17500 13600 17550 13600
+Wire Wire Line
+	17550 13600 17550 13700
+Wire Wire Line
+	17650 13500 17650 13700
+Wire Wire Line
+	17800 13500 17800 13600
+Wire Wire Line
+	17800 13600 17750 13600
+Wire Wire Line
+	17750 13600 17750 13700
+Wire Wire Line
+	17950 13500 17950 13600
+Wire Wire Line
+	17950 13600 17850 13600
+Wire Wire Line
+	17850 13600 17850 13700
+$Comp
+L Device:LED D30
+U 1 1 671632EB
+P 18350 13350
+F 0 "D30" V 18450 13350 50  0000 R CNN
+F 1 "LED" V 18298 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18350 13350 50  0001 C CNN
+F 3 "~" H 18350 13350 50  0001 C CNN
+	1    18350 13350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 18800 13100 1    35   Input ~ 0
+AANDB0
+Text GLabel 18650 13100 1    35   Input ~ 0
+AANDB1
+Text GLabel 18500 13100 1    35   Input ~ 0
+AANDB2
+Text GLabel 18350 13100 1    35   Input ~ 0
+AANDB3
+Wire Wire Line
+	18350 13100 18350 13200
+$Comp
+L power:GND #PWR0123
+U 1 1 671632F6
+P 18700 14200
+F 0 "#PWR0123" H 18700 13950 50  0001 C CNN
+F 1 "GND" H 18705 14027 50  0000 C CNN
+F 2 "" H 18700 14200 50  0001 C CNN
+F 3 "" H 18700 14200 50  0001 C CNN
+	1    18700 14200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN9
+U 1 1 671632FC
+P 18500 13900
+F 0 "RN9" H 18220 13854 50  0000 R CNN
+F 1 "470Ω" H 18220 13945 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 18775 13900 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 18500 13900 50  0001 C CNN
+	1    18500 13900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D32
+U 1 1 67163302
+P 18500 13350
+F 0 "D32" V 18600 13350 50  0000 R CNN
+F 1 "LED" V 18448 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18500 13350 50  0001 C CNN
+F 3 "~" H 18500 13350 50  0001 C CNN
+	1    18500 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D33
+U 1 1 67163308
+P 18650 13350
+F 0 "D33" V 18750 13350 50  0000 R CNN
+F 1 "LED" V 18598 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18650 13350 50  0001 C CNN
+F 3 "~" H 18650 13350 50  0001 C CNN
+	1    18650 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D35
+U 1 1 6716330E
+P 18800 13350
+F 0 "D35" V 18900 13350 50  0000 R CNN
+F 1 "LED" V 18748 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 18800 13350 50  0001 C CNN
+F 3 "~" H 18800 13350 50  0001 C CNN
+	1    18800 13350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18500 13100 18500 13200
+Wire Wire Line
+	18650 13100 18650 13200
+Wire Wire Line
+	18700 14100 18700 14200
+Wire Wire Line
+	18800 13100 18800 13200
+Wire Wire Line
+	18350 13500 18350 13600
+Wire Wire Line
+	18350 13600 18400 13600
+Wire Wire Line
+	18400 13600 18400 13700
+Wire Wire Line
+	18500 13500 18500 13700
+Wire Wire Line
+	18650 13500 18650 13600
+Wire Wire Line
+	18650 13600 18600 13600
+Wire Wire Line
+	18600 13600 18600 13700
+Wire Wire Line
+	18800 13500 18800 13600
+Wire Wire Line
+	18800 13600 18700 13600
+Wire Wire Line
+	18700 13600 18700 13700
+$Comp
+L Device:LED D38
+U 1 1 6720A291
+P 19150 13350
+F 0 "D38" V 19250 13350 50  0000 R CNN
+F 1 "LED" V 19098 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19150 13350 50  0001 C CNN
+F 3 "~" H 19150 13350 50  0001 C CNN
+	1    19150 13350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 19600 13100 1    35   Input ~ 0
+AXORB0
+Text GLabel 19450 13100 1    35   Input ~ 0
+AXORB1
+Text GLabel 19300 13100 1    35   Input ~ 0
+AXORB2
+Text GLabel 19150 13100 1    35   Input ~ 0
+AXORB3
+Wire Wire Line
+	19150 13100 19150 13200
+$Comp
+L power:GND #PWR0124
+U 1 1 6720A29C
+P 19500 14200
+F 0 "#PWR0124" H 19500 13950 50  0001 C CNN
+F 1 "GND" H 19505 14027 50  0000 C CNN
+F 2 "" H 19500 14200 50  0001 C CNN
+F 3 "" H 19500 14200 50  0001 C CNN
+	1    19500 14200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04_US RN11
+U 1 1 6720A2A2
+P 19300 13900
+F 0 "RN11" H 19020 13854 50  0000 R CNN
+F 1 "470Ω" H 19020 13945 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 19575 13900 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 19300 13900 50  0001 C CNN
+	1    19300 13900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D40
+U 1 1 6720A2A8
+P 19300 13350
+F 0 "D40" V 19400 13350 50  0000 R CNN
+F 1 "LED" V 19248 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19300 13350 50  0001 C CNN
+F 3 "~" H 19300 13350 50  0001 C CNN
+	1    19300 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D41
+U 1 1 6720A2AE
+P 19450 13350
+F 0 "D41" V 19550 13350 50  0000 R CNN
+F 1 "LED" V 19398 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19450 13350 50  0001 C CNN
+F 3 "~" H 19450 13350 50  0001 C CNN
+	1    19450 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D42
+U 1 1 6720A2B4
+P 19600 13350
+F 0 "D42" V 19700 13350 50  0000 R CNN
+F 1 "LED" V 19548 13233 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 19600 13350 50  0001 C CNN
+F 3 "~" H 19600 13350 50  0001 C CNN
+	1    19600 13350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	19300 13100 19300 13200
+Wire Wire Line
+	19450 13100 19450 13200
+Wire Wire Line
+	19500 14100 19500 14200
+Wire Wire Line
+	19600 13100 19600 13200
+Wire Wire Line
+	19150 13500 19150 13600
+Wire Wire Line
+	19150 13600 19200 13600
+Wire Wire Line
+	19200 13600 19200 13700
+Wire Wire Line
+	19300 13500 19300 13700
+Wire Wire Line
+	19450 13500 19450 13600
+Wire Wire Line
+	19450 13600 19400 13600
+Wire Wire Line
+	19400 13600 19400 13700
+Wire Wire Line
+	19600 13500 19600 13600
+Wire Wire Line
+	19600 13600 19500 13600
+Wire Wire Line
+	19500 13600 19500 13700
+Text GLabel 10100 8250 1    35   Output ~ 0
+AXORB0
+Text GLabel 10000 8250 1    35   Output ~ 0
+AXORB1
+Text GLabel 9900 8250 1    35   Output ~ 0
+AXORB2
+Text GLabel 9800 8250 1    35   Output ~ 0
+AXORB3
+Wire Wire Line
+	10100 8250 10100 8350
+Connection ~ 10100 8350
+Wire Wire Line
+	10100 8350 10150 8350
+Wire Wire Line
+	10000 8250 10000 8450
+Connection ~ 10000 8450
+Wire Wire Line
+	10000 8450 10150 8450
+Wire Wire Line
+	9900 8250 9900 8550
+Connection ~ 9900 8550
+Wire Wire Line
+	9900 8550 10150 8550
+Wire Wire Line
+	9800 8250 9800 8650
+Connection ~ 9800 8650
+Text GLabel 6550 8250 1    35   Output ~ 0
+AANDB0
+Text GLabel 6450 8250 1    35   Output ~ 0
+AANDB1
+Text GLabel 6350 8250 1    35   Output ~ 0
+AANDB2
+Text GLabel 6250 8250 1    35   Output ~ 0
+AANDB3
+Wire Wire Line
+	6550 8250 6550 8350
+Connection ~ 6550 8350
+Wire Wire Line
+	6550 8350 6600 8350
+Wire Wire Line
+	6450 8250 6450 8450
+Connection ~ 6450 8450
+Wire Wire Line
+	6450 8450 6600 8450
+Wire Wire Line
+	6350 8250 6350 8550
+Connection ~ 6350 8550
+Wire Wire Line
+	6350 8550 6600 8550
+Wire Wire Line
+	6250 8250 6250 8650
+Connection ~ 6250 8650
+Text GLabel 3000 8250 1    35   Output ~ 0
+AORB0
+Text GLabel 2900 8250 1    35   Output ~ 0
+AORB1
+Text GLabel 2800 8250 1    35   Output ~ 0
+AORB2
+Text GLabel 2700 8250 1    35   Output ~ 0
+AORB3
+Wire Wire Line
+	3000 8250 3000 8350
+Connection ~ 3000 8350
+Wire Wire Line
+	3000 8350 3050 8350
+Wire Wire Line
+	2900 8250 2900 8450
+Connection ~ 2900 8450
+Wire Wire Line
+	2900 8450 3050 8450
+Wire Wire Line
+	2700 8250 2700 8650
+Connection ~ 2700 8650
+Wire Wire Line
+	2500 8450 2900 8450
+Wire Wire Line
+	2800 8250 2800 8550
+Wire Wire Line
+	2600 8550 2800 8550
+Wire Wire Line
+	2800 8550 3050 8550
+Connection ~ 2800 8550
+$Comp
+L Device:LED D43
+U 1 1 683E8FBB
+P 14950 9650
+F 0 "D43" V 15050 9650 50  0000 R CNN
+F 1 "LED" V 14898 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 14950 9650 50  0001 C CNN
+F 3 "~" H 14950 9650 50  0001 C CNN
+	1    14950 9650
+	0    1    1    0   
+$EndComp
+Text GLabel 15400 9400 1    35   Input ~ 0
+~CLF
+Text GLabel 15250 9400 1    35   Input ~ 0
+~LDF
+Text GLabel 15100 9400 1    35   Input ~ 0
+~LDB
+Text GLabel 14950 9400 1    35   Input ~ 0
+~LDA
+Wire Wire Line
+	14950 9400 14950 9500
+$Comp
+L Device:R_Network04_US RN12
+U 1 1 683E8FCC
+P 15100 10200
+F 0 "RN12" H 14820 10154 50  0000 R CNN
+F 1 "470Ω" H 14820 10245 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 15375 10200 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 15100 10200 50  0001 C CNN
+	1    15100 10200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D44
+U 1 1 683E8FD2
+P 15100 9650
+F 0 "D44" V 15200 9650 50  0000 R CNN
+F 1 "LED" V 15048 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15100 9650 50  0001 C CNN
+F 3 "~" H 15100 9650 50  0001 C CNN
+	1    15100 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D45
+U 1 1 683E8FD8
+P 15250 9650
+F 0 "D45" V 15350 9650 50  0000 R CNN
+F 1 "LED" V 15198 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15250 9650 50  0001 C CNN
+F 3 "~" H 15250 9650 50  0001 C CNN
+	1    15250 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D46
+U 1 1 683E8FDE
+P 15400 9650
+F 0 "D46" V 15500 9650 50  0000 R CNN
+F 1 "LED" V 15348 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15400 9650 50  0001 C CNN
+F 3 "~" H 15400 9650 50  0001 C CNN
+	1    15400 9650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	15100 9400 15100 9500
+Wire Wire Line
+	15250 9400 15250 9500
+Wire Wire Line
+	15300 10400 15300 10500
+Wire Wire Line
+	15400 9400 15400 9500
+Wire Wire Line
+	14950 9800 14950 9900
+Wire Wire Line
+	14950 9900 15000 9900
+Wire Wire Line
+	15000 9900 15000 10000
+Wire Wire Line
+	15100 9800 15100 10000
+Wire Wire Line
+	15250 9800 15250 9900
+Wire Wire Line
+	15250 9900 15200 9900
+Wire Wire Line
+	15200 9900 15200 10000
+Wire Wire Line
+	15400 9800 15400 9900
+Wire Wire Line
+	15400 9900 15300 9900
+Wire Wire Line
+	15300 9900 15300 10000
+$Comp
+L power:VCC #PWR01
+U 1 1 68A72452
+P 14700 9300
+F 0 "#PWR01" H 14700 9150 50  0001 C CNN
+F 1 "VCC" H 14717 9473 50  0000 C CNN
+F 2 "" H 14700 9300 50  0001 C CNN
+F 3 "" H 14700 9300 50  0001 C CNN
+	1    14700 9300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14700 9300 14700 10500
+Wire Wire Line
+	14700 10500 15300 10500
+$Comp
+L Device:LED D47
+U 1 1 68B3CB23
+P 15850 9650
+F 0 "D47" V 15950 9650 50  0000 R CNN
+F 1 "LED" V 15798 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 15850 9650 50  0001 C CNN
+F 3 "~" H 15850 9650 50  0001 C CNN
+	1    15850 9650
+	0    1    1    0   
+$EndComp
+Text GLabel 16000 9400 1    35   Input ~ 0
+~OE
+Text GLabel 15850 9400 1    35   Input ~ 0
+~ALUEN
+Wire Wire Line
+	15850 9400 15850 9500
+$Comp
+L Device:LED D48
+U 1 1 68B3CB32
+P 16000 9650
+F 0 "D48" V 16100 9650 50  0000 R CNN
+F 1 "LED" V 15948 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16000 9650 50  0001 C CNN
+F 3 "~" H 16000 9650 50  0001 C CNN
+	1    16000 9650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	16000 9400 16000 9500
+$Comp
+L Device:R R3
+U 1 1 68B3CB39
+P 15850 10150
+F 0 "R3" H 15700 10200 50  0000 L CNN
+F 1 "470Ω" H 15600 10100 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 15780 10150 50  0001 C CNN
+F 3 "~" H 15850 10150 50  0001 C CNN
+	1    15850 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 68B3CB3F
+P 16000 10150
+F 0 "R4" H 16070 10196 50  0000 L CNN
+F 1 "470Ω" H 16070 10105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 15930 10150 50  0001 C CNN
+F 3 "~" H 16000 10150 50  0001 C CNN
+	1    16000 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15850 9800 15850 10000
+Wire Wire Line
+	16000 9800 16000 10000
+Wire Wire Line
+	15850 10300 15850 10500
+Wire Wire Line
+	15300 10500 15850 10500
+Connection ~ 15300 10500
+Wire Wire Line
+	15850 10500 16000 10500
+Wire Wire Line
+	16000 10300 16000 10500
+Connection ~ 15850 10500
+$Comp
+L Device:LED D49
+U 1 1 69134930
+P 16500 9650
+F 0 "D49" V 16600 9650 50  0000 R CNN
+F 1 "LED" V 16448 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16500 9650 50  0001 C CNN
+F 3 "~" H 16500 9650 50  0001 C CNN
+	1    16500 9650
+	0    1    1    0   
+$EndComp
+Text GLabel 16950 9400 1    35   Input ~ 0
+~SUB
+Text GLabel 16800 9400 1    35   Input ~ 0
+~ADD
+Text GLabel 16650 9400 1    35   Input ~ 0
+~FNEGA
+Text GLabel 16500 9400 1    35   Input ~ 0
+~FNOTA
+Wire Wire Line
+	16500 9400 16500 9500
+$Comp
+L Device:R_Network04_US RN13
+U 1 1 6913493B
+P 16650 10200
+F 0 "RN13" H 16370 10154 50  0000 R CNN
+F 1 "470Ω" H 16370 10245 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 16925 10200 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 16650 10200 50  0001 C CNN
+	1    16650 10200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D50
+U 1 1 69134941
+P 16650 9650
+F 0 "D50" V 16750 9650 50  0000 R CNN
+F 1 "LED" V 16598 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16650 9650 50  0001 C CNN
+F 3 "~" H 16650 9650 50  0001 C CNN
+	1    16650 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D51
+U 1 1 69134947
+P 16800 9650
+F 0 "D51" V 16900 9650 50  0000 R CNN
+F 1 "LED" V 16748 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16800 9650 50  0001 C CNN
+F 3 "~" H 16800 9650 50  0001 C CNN
+	1    16800 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D52
+U 1 1 6913494D
+P 16950 9650
+F 0 "D52" V 17050 9650 50  0000 R CNN
+F 1 "LED" V 16898 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 16950 9650 50  0001 C CNN
+F 3 "~" H 16950 9650 50  0001 C CNN
+	1    16950 9650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	16650 9400 16650 9500
+Wire Wire Line
+	16800 9400 16800 9500
+Wire Wire Line
+	16850 10400 16850 10500
+Wire Wire Line
+	16950 9400 16950 9500
+Wire Wire Line
+	16500 9800 16500 9900
+Wire Wire Line
+	16500 9900 16550 9900
+Wire Wire Line
+	16550 9900 16550 10000
+Wire Wire Line
+	16650 9800 16650 10000
+Wire Wire Line
+	16800 9800 16800 9900
+Wire Wire Line
+	16800 9900 16750 9900
+Wire Wire Line
+	16750 9900 16750 10000
+Wire Wire Line
+	16950 9800 16950 9900
+Wire Wire Line
+	16950 9900 16850 9900
+Wire Wire Line
+	16850 9900 16850 10000
+$Comp
+L Device:LED D53
+U 1 1 69219860
+P 17150 9650
+F 0 "D53" V 17250 9650 50  0000 R CNN
+F 1 "LED" V 17098 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17150 9650 50  0001 C CNN
+F 3 "~" H 17150 9650 50  0001 C CNN
+	1    17150 9650
+	0    1    1    0   
+$EndComp
+Text GLabel 17600 9400 1    35   Input ~ 0
+~FAND
+Text GLabel 17450 9400 1    35   Input ~ 0
+~FOR
+Text GLabel 17300 9400 1    35   Input ~ 0
+~FCMP
+Text GLabel 17150 9400 1    35   Input ~ 0
+~CE
+Wire Wire Line
+	17150 9400 17150 9500
+$Comp
+L Device:R_Network04_US RN14
+U 1 1 6921986B
+P 17300 10200
+F 0 "RN14" H 17020 10154 50  0000 R CNN
+F 1 "470Ω" H 17020 10245 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 17575 10200 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 17300 10200 50  0001 C CNN
+	1    17300 10200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D54
+U 1 1 69219871
+P 17300 9650
+F 0 "D54" V 17400 9650 50  0000 R CNN
+F 1 "LED" V 17248 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17300 9650 50  0001 C CNN
+F 3 "~" H 17300 9650 50  0001 C CNN
+	1    17300 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D55
+U 1 1 69219877
+P 17450 9650
+F 0 "D55" V 17550 9650 50  0000 R CNN
+F 1 "LED" V 17398 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17450 9650 50  0001 C CNN
+F 3 "~" H 17450 9650 50  0001 C CNN
+	1    17450 9650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D56
+U 1 1 6921987D
+P 17600 9650
+F 0 "D56" V 17700 9650 50  0000 R CNN
+F 1 "LED" V 17548 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17600 9650 50  0001 C CNN
+F 3 "~" H 17600 9650 50  0001 C CNN
+	1    17600 9650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	17300 9400 17300 9500
+Wire Wire Line
+	17450 9400 17450 9500
+Wire Wire Line
+	17500 10400 17500 10500
+Wire Wire Line
+	17600 9400 17600 9500
+Wire Wire Line
+	17150 9800 17150 9900
+Wire Wire Line
+	17150 9900 17200 9900
+Wire Wire Line
+	17200 9900 17200 10000
+Wire Wire Line
+	17300 9800 17300 10000
+Wire Wire Line
+	17450 9800 17450 9900
+Wire Wire Line
+	17450 9900 17400 9900
+Wire Wire Line
+	17400 9900 17400 10000
+Wire Wire Line
+	17600 9800 17600 9900
+Wire Wire Line
+	17600 9900 17500 9900
+Wire Wire Line
+	17500 9900 17500 10000
+Text GLabel 17850 9400 1    35   Input ~ 0
+~FXOR
+$Comp
+L Device:LED D57
+U 1 1 692EBDC0
+P 17850 9650
+F 0 "D57" V 17950 9650 50  0000 R CNN
+F 1 "LED" V 17798 9533 50  0001 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 17850 9650 50  0001 C CNN
+F 3 "~" H 17850 9650 50  0001 C CNN
+	1    17850 9650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	17850 9400 17850 9500
+$Comp
+L Device:R R5
+U 1 1 692EBDC7
+P 17850 10150
+F 0 "R5" H 17920 10196 50  0000 L CNN
+F 1 "470Ω" H 17920 10105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 17780 10150 50  0001 C CNN
+F 3 "~" H 17850 10150 50  0001 C CNN
+	1    17850 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17850 9800 17850 10000
+Wire Wire Line
+	17850 10300 17850 10500
+Wire Wire Line
+	16000 10500 16850 10500
+Connection ~ 16000 10500
+Connection ~ 16850 10500
+Wire Wire Line
+	16850 10500 17500 10500
+Connection ~ 17500 10500
+Wire Wire Line
+	17500 10500 17850 10500
+$EndSCHEMATC
